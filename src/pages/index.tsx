@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import LandingSection from "../components/info-sections/landing-section";
+import AboutUsSection from "../components/info-sections/aboutus-section";
 
 export const metadata: Metadata = {
   title: "ITR Mitra",
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <title>ITR Mitra | Home</title>
       <LandingSection />
+      <AboutUsSection />
     </>
   );
 }
