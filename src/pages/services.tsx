@@ -1,3 +1,8 @@
 export default function Services() {
-  return <main>Services</main>;
+  return (
+    <>
+      <title>ITR Mitra | Services</title>
+      Services
+    </>
+  );
 }

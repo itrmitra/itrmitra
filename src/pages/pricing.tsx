@@ -1,3 +1,8 @@
 export default function Pricing() {
-  return <main>Pricing Page</main>;
+  return (
+    <>
+      <title>ITR Mitra | Pricing</title>
+      Pricing Page
+    </>
+  );
 }

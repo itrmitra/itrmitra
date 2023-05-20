@@ -1,3 +1,8 @@
 export default function Contact() {
-  return <main>Contact</main>;
+  return (
+    <>
+      <title>ITR Mitra | Contact</title>
+      Pricing Page
+    </>
+  );
 }

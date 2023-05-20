@@ -1,3 +1,8 @@
 export default function AboutUs() {
-  return <main></main>;
+  return (
+    <>
+      <title>ITR Mitra | About Us</title>
+      About Us
+    </>
+  );
 }

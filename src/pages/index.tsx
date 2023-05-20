@@ -1,14 +1,17 @@
-import { Inter } from "next/font/google";
-import { cn } from "../lib/utils";
-import { buttonVariants } from "../components/ui/button";
+import { Metadata } from "next";
 import LandingSection from "../components/info-sections/landing-section";
 
-const inter = Inter({ subsets: ["latin"] });
+export const metadata: Metadata = {
+  title: "ITR Mitra",
+  description:
+    "ITR Mitra helps in filing taxation and with the whole ITR filing process.",
+};
 
 export default function Home() {
   return (
-    <main className={cn("", inter.className)}>
+    <>
+      <title>ITR Mitra | Home</title>
       <LandingSection />
-    </main>
+    </>
   );
 }
