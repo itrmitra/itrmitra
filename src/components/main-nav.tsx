@@ -13,7 +13,7 @@ interface MainNavProps {
 
 export function MainNav({ items, currentHref }: MainNavProps) {
   return (
-    <nav className="flex items-center justify-evenly space-x-12 px-8 text-sm">
+    <nav className="hidden md:flex items-center justify-evenly space-x-12 px-8 text-sm">
       <>
         {items.map((item) => (
           <Link
