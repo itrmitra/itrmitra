@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
             <h1 className="mx-auto font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tighter leading-tight mb-4">
                 Testimonials
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl tracking-tight mx-auto">
+            <p className="text-xl md:text-2xl lg:text-3xl tracking-tight mx-auto text-center">
                 We have worked with hundreds of amazing people
             </p>
             <div className="mt-4 md:mt-8 space-y-8 md:space-y-0 md:grid grid-cols-3 md:grid-flow-col md:grid-rows-2 p-12 md:gap-8">
@@ -85,9 +85,9 @@ function TestimonialCard({
             <blockquote className="text-sm md:text-lg">
                 <p>"{text}"</p>
             </blockquote>
-            <figcaption className="flex items-center gap-2">
+            <figcaption className="flex flex-col  md:flex-row items-center gap-2">
                 <img src={imageUrl} className="h-10 w-10 rounded-full object-cover" />
-                <div className="inline-block font-bold text-xs md:text-sm flex-1">{name}</div>
+                <div className="inline-block font-bold text-xs md:text-sm md:flex-1">{name}</div>
                 <div className="flex items-center">
                     <img src="/google.svg" className="h-6 mr-2" />
                     {...stars}
