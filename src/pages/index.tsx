@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 import LandingSection from "../components/info-sections/landing-section"
 import AboutUsSection from "../components/info-sections/aboutus-section"
-import ServicesSection from "../components/info-sections/services-section"
 import FormFilingSection from "../components/info-sections/form-filing-section"
+import TestimonialsSection from "../components/info-sections/testimonials-section"
 
 export const metadata: Metadata = {
     title: "ITR Mitra",
@@ -16,7 +16,7 @@ export default function Home() {
             <LandingSection />
             <FormFilingSection />
             <AboutUsSection />
-            <ServicesSection />
+            <TestimonialsSection />
         </>
     )
 }
