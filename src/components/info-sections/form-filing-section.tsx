@@ -69,7 +69,7 @@ export default function FormFilingSection() {
             <div className="flex-1">
                 <img src="/mail.svg" className="h-52 md:h-auto" />
             </div>
-            <div className="flex-1 mb-8 md:mb-0 z-0 px-4 sm:px-0">
+            <div className="flex-1 mb-8 md:mb-0 z-0 px-12 sm:px-0">
                 <h2 className="font-extrabold text-4xl md:text-5xl tracking-tighter mb-4">
                     Connect me with ITR Mitra
                 </h2>
