@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { buttonVariants } from "../ui/button"
 import { sendEmail } from "../../lib/sendEmail"
+import { cn } from "../../lib/utils"
+import { inputVariants } from "../ui/input"
 
 interface FormDataType {
     name: string
@@ -43,7 +45,16 @@ export default function FormFilingSection() {
 
         const res = await sendEmail(formState)
         if (!res) setError("Could not send email. Please Try Again Later.")
-        else setSuccess(true)
+        else {
+            setSuccess(true)
+            setFormState({
+                name: "",
+                email: "",
+                phone: "",
+                query: "",
+                type: "FILE ITR",
+            })
+        }
         setLoading(false)
     }
 
@@ -54,12 +65,12 @@ export default function FormFilingSection() {
         }))
     }
     return (
-        <div className="py-8 md:py-0 md:min-h-screen flex flex-col-reverse md:flex-row items-center bg-[#ECF5CC]">
+        <div className="py-8 md:py-0 md:min-h-screen flex flex-col md:flex-row items-center bg-light-brand">
             <div className="flex-1">
-                <div className="w-3/4 flex flex-col mx-auto text-center md:text-start items-center md:items-start"></div>
+                <img src="/mail.svg" className="h-52 md:h-auto" />
             </div>
             <div className="flex-1 mb-8 md:mb-0 z-0 px-4 sm:px-0">
-                <h2 className="font-extrabold text-3xl tracking-tighter mb-4 text-secondary">
+                <h2 className="font-extrabold text-4xl md:text-5xl tracking-tighter mb-4">
                     Connect me with ITR Mitra
                 </h2>
                 <form
@@ -74,9 +85,10 @@ export default function FormFilingSection() {
                             id="fullname"
                             name="name"
                             type="text"
+                            value={formState.name}
                             placeholder="Full Name"
                             onChange={onChange}
-                            className="placeholder:text-secondary/95 p-4 rounded-md text-secondary w-full"
+                            className={cn(inputVariants())}
                         />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -87,9 +99,10 @@ export default function FormFilingSection() {
                             required
                             name="email"
                             type="text"
+                            value={formState.email}
                             placeholder="Email (required)"
                             onChange={onChange}
-                            className="placeholder:text-secondary/95 p-4 rounded-md text-secondary w-full"
+                            className={cn(inputVariants())}
                         />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -100,9 +113,10 @@ export default function FormFilingSection() {
                             required
                             name="phone"
                             type="number"
+                            value={formState.phone}
                             placeholder="Phone Number (required)"
                             onChange={onChange}
-                            className="placeholder:text-secondary/95 p-4 rounded-md text-secondary w-full"
+                            className={cn(inputVariants())}
                         />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -112,13 +126,16 @@ export default function FormFilingSection() {
                         <textarea
                             id="query"
                             name="query"
+                            value={formState.query}
                             placeholder="Message"
                             onChange={onChange}
-                            className="placeholder:text-secondary/95 p-4 rounded-md text-secondary"
+                            className={cn(inputVariants(), "overflow-hidden max-h-32")}
                         />
                     </div>
-                    {error.length > 0 && <p className="text-red-500 font-bold text-sm">{error}</p>}
-                    <div className="flex gap-4 font-bold">
+                    {error.length > 0 && (
+                        <p className="text-red-500 bg-sky-500 font-bold text-sm">{error}</p>
+                    )}
+                    <div className="flex gap-4 font-bold mb-6">
                         <div className="flex gap-2">
                             <input
                                 required
@@ -147,14 +164,15 @@ export default function FormFilingSection() {
                             </label>
                         </div>
                     </div>
-
-                    <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
+                    <div className="flex flex-col md:flex-row gap-4  items-start md:items-center">
                         <button type="submit" className={buttonVariants()} disabled={loading}>
                             {loading ? "Loading..." : "Get Started"}
                         </button>
-                        <span className="text-green-600 font-bold">
-                            {success && "Our experts will contact you after some time."}
-                        </span>
+                        {success && (
+                            <span className="text-brand font-bold text-sm">
+                                Email sent successfully. Our experts will contact you soon.
+                            </span>
+                        )}
                     </div>
                 </form>
             </div>
