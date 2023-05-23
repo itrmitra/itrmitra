@@ -32,11 +32,14 @@ export const sendEmail = async (state: FormState) => {
 
     console.log("Email api key : ", process.env.NEXT_PUBLIC_EMAIL_API_KEY)
 
-    await axios.post(url, data, {
+    const result = await axios.post(url, data, {
         headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
             "Api-Key": process.env.NEXT_PUBLIC_EMAIL_API_KEY,
         },
     })
+
+    if (!(result.status >= 200 && result.status < 300)) return false
+    return true
 }
