@@ -1,5 +1,4 @@
-import { cn } from "../../lib/utils"
-import { buttonVariants } from "../ui/button"
+import WhatsappButton from "../whatsapp_button"
 
 export default function LandingSection() {
     return (
@@ -12,7 +11,7 @@ export default function LandingSection() {
                     <p className="text-sm md:text-base lg:text-lg mb-8">
                         Maximize Returns, Minimize Stress: Your Trusted Tax Filing Partner
                     </p>
-                    <button className={cn(buttonVariants())}>Write us a query</button>
+                    <WhatsappButton />
                 </div>
             </div>
             <div className="flex-1 mb-8 md:mb-0">
