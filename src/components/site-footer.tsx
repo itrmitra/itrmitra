@@ -1,3 +1,5 @@
+import WhatsappButton from "./whatsapp_button"
+
 export function SiteFooter() {
-  return <footer>Site Footer</footer>;
+    return <footer></footer>
 }
