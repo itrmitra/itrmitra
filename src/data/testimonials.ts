@@ -30,7 +30,7 @@ export const testimonials = [
     },
     {
         name: "Brijesh Nair",
-        text: "I'm filing my ITR from Jitendra from last 3 years, he is very professional in his work, excellent command over taxation and give me best advice as possible, guided me soo much with my taxes. Now I cam focus on my business and need not to worry about tax and accounts part, Jitendra take care of everything. \nThank you Jitendra, keep it up ITR Mitra.",
+        text: "I'm filing my ITR from Jitendra from last 3 years, he is very professional in his work, excellent command over taxation and give me best advice as possible, guided me soo much with my taxes. Now I can focus on my business and need not to worry about tax and accounts part, Jitendra take care of everything. Thank you Jitendra, keep it up ITR Mitra.",
         numStars: 4,
         imageUrl: "/brijesh-nair.jpg",
     },
