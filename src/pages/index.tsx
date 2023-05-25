@@ -3,6 +3,7 @@ import LandingSection from "../components/info-sections/landing-section"
 import AboutUsSection from "../components/info-sections/aboutus-section"
 import FormFilingSection from "../components/info-sections/form-filing-section"
 import TestimonialsSection from "../components/info-sections/testimonials-section"
+import FaqSection from "../components/info-sections/faq-section"
 
 export const metadata: Metadata = {
     title: "ITR Mitra",
@@ -17,6 +18,7 @@ export default function Home() {
             <FormFilingSection />
             <AboutUsSection />
             <TestimonialsSection />
+            <FaqSection />
         </>
     )
 }
