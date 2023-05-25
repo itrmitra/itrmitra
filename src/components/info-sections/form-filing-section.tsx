@@ -65,14 +65,14 @@ export default function FormFilingSection() {
         }))
     }
     return (
-        <div className="flex flex-col items-center bg-light-brand py-8 md:min-h-screen md:flex-row md:py-0">
+        <div className="flex flex-col items-center bg-light-brand px-8 py-12 md:min-h-screen md:flex-row md:justify-between">
             <div className="flex-1">
-                <img src="/mail.svg" className="h-52 md:h-auto" />
+                <img src="/mail.svg" className="h-52 md:mx-auto md:h-auto" />
             </div>
-            <div className="z-0 mb-8 flex-1 px-12 sm:px-0 md:mb-0">
-                <h2 className="mb-4 text-4xl font-extrabold tracking-tighter md:text-5xl">
+            <div className="z-0 mb-8 flex-1 sm:px-0 md:mb-0">
+                <h1 className="mb-4 text-4xl font-extrabold tracking-tighter md:text-5xl">
                     Connect me with ITR Mitra
-                </h2>
+                </h1>
                 <form
                     onSubmit={onSubmit}
                     className="flex flex-col gap-4 text-sm md:w-3/4 md:text-base"
@@ -164,12 +164,12 @@ export default function FormFilingSection() {
                             </label>
                         </div>
                     </div>
-                    <div className="flex flex-col items-start gap-4  md:flex-row md:items-center">
+                    <div className="space-y-4">
                         <button type="submit" className={buttonVariants()} disabled={loading}>
                             {loading ? "Loading..." : "Get Started"}
                         </button>
                         {success && (
-                            <span className="text-sm font-bold text-brand">
+                            <span className="block rounded-md bg-green-600 p-4 text-sm font-bold text-brand text-white shadow-lg">
                                 Email sent successfully. Our experts will contact you soon.
                             </span>
                         )}
