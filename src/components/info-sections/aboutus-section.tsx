@@ -17,15 +17,15 @@ export default function AboutUsSection() {
                     <ul className="mb-8 space-y-4 text-sm md:text-base lg:text-lg">
                         <li className="flex items-start gap-2">
                             <CheckCircle size={24} />
-                            Quality and on-time services.
+                            Team of experts in Indian Tax Laws
                         </li>
                         <li className="flex items-start gap-2">
                             <CheckCircle size={24} />
-                            Expert team members with industry experience.
+                            Your data is safe with us
                         </li>
                         <li className="flex items-start gap-2">
                             <CheckCircle size={24} />
-                            Secure processing of your documents.
+                            Client satisfaction is our top priority
                         </li>
                     </ul>
                     <button className={cn(buttonVariants(), "gap-2")}>
