@@ -4,17 +4,17 @@ import { cn } from "../../lib/utils"
 
 export default function AboutUsSection() {
     return (
-        <div className="py-8 md:py-0 md:min-h-screen flex flex-col  md:flex-row items-center">
-            <div className="flex-1 mb-8 md:mb-0">
+        <div className="flex flex-col items-center py-8 md:min-h-screen  md:flex-row md:py-0">
+            <div className="mb-8 flex-1 md:mb-0">
                 <img src="/meet-the-team.svg" className="h-52 md:h-auto" />
             </div>
             <div className="flex-1">
-                <div className="w-3/4 flex flex-col mx-auto items-center md:items-start">
-                    <h2 className="text-sm lg:text-lg mb-4 text-center md:text-start">ABOUT US</h2>
-                    <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tighter leading-tight mb-6 text-center md:text-start">
+                <div className="mx-auto flex w-3/4 flex-col items-center md:items-start">
+                    <h2 className="mb-4 text-center text-sm md:text-start lg:text-lg">ABOUT US</h2>
+                    <h1 className="mb-6 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-start md:text-5xl lg:text-6xl">
                         We are here to make your tax filing process easier!
                     </h1>
-                    <ul className="text-sm md:text-base lg:text-lg mb-8 space-y-4">
+                    <ul className="mb-8 space-y-4 text-sm md:text-base lg:text-lg">
                         <li className="flex items-start gap-2">
                             <CheckCircle size={24} />
                             Quality and on-time services.

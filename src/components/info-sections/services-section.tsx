@@ -1,8 +1,8 @@
 export default function ServicesSection() {
     return (
-        <div className="py-8 md:min-h-screen flex text-center md:flex-row">
+        <div className="flex py-8 text-center md:min-h-screen md:flex-row">
             <div className="flex-1">
-                <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tighter leading-tight mb-4">
+                <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                     Services
                 </h1>
             </div>

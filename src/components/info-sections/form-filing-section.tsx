@@ -65,17 +65,17 @@ export default function FormFilingSection() {
         }))
     }
     return (
-        <div className="py-8 md:py-0 md:min-h-screen flex flex-col md:flex-row items-center bg-light-brand">
+        <div className="flex flex-col items-center bg-light-brand py-8 md:min-h-screen md:flex-row md:py-0">
             <div className="flex-1">
                 <img src="/mail.svg" className="h-52 md:h-auto" />
             </div>
-            <div className="flex-1 mb-8 md:mb-0 z-0 px-12 sm:px-0">
-                <h2 className="font-extrabold text-4xl md:text-5xl tracking-tighter mb-4">
+            <div className="z-0 mb-8 flex-1 px-12 sm:px-0 md:mb-0">
+                <h2 className="mb-4 text-4xl font-extrabold tracking-tighter md:text-5xl">
                     Connect me with ITR Mitra
                 </h2>
                 <form
                     onSubmit={onSubmit}
-                    className="flex flex-col gap-4 md:w-3/4 text-sm md:text-base"
+                    className="flex flex-col gap-4 text-sm md:w-3/4 md:text-base"
                 >
                     <div className="flex flex-col gap-2">
                         <label htmlFor="fullname" className="font-bold">
@@ -129,13 +129,13 @@ export default function FormFilingSection() {
                             value={formState.query}
                             placeholder="Message"
                             onChange={onChange}
-                            className={cn(inputVariants(), "overflow-hidden max-h-32")}
+                            className={cn(inputVariants(), "max-h-32 overflow-hidden")}
                         />
                     </div>
                     {error.length > 0 && (
-                        <p className="text-red-500 bg-sky-500 font-bold text-sm">{error}</p>
+                        <p className="bg-sky-500 text-sm font-bold text-red-500">{error}</p>
                     )}
-                    <div className="flex gap-4 font-bold mb-6">
+                    <div className="mb-6 flex gap-4 font-bold">
                         <div className="flex gap-2">
                             <input
                                 required
@@ -164,12 +164,12 @@ export default function FormFilingSection() {
                             </label>
                         </div>
                     </div>
-                    <div className="flex flex-col md:flex-row gap-4  items-start md:items-center">
+                    <div className="flex flex-col items-start gap-4  md:flex-row md:items-center">
                         <button type="submit" className={buttonVariants()} disabled={loading}>
                             {loading ? "Loading..." : "Get Started"}
                         </button>
                         {success && (
-                            <span className="text-brand font-bold text-sm">
+                            <span className="text-sm font-bold text-brand">
                                 Email sent successfully. Our experts will contact you soon.
                             </span>
                         )}

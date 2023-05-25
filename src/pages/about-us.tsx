@@ -2,11 +2,11 @@ export default function AboutUs() {
     return (
         <>
             <title>ITR Mitra | About Us</title>
-            <div className="min-h-screen flex flex-col justify-center items-center">
-                <h1 className="text-4xl md:text-4xl lg:text-6xl font-extrabold tracking-tighter">
+            <div className="flex min-h-screen flex-col items-center justify-center">
+                <h1 className="text-4xl font-extrabold tracking-tighter md:text-4xl lg:text-6xl">
                     In Development...
                 </h1>
-                <p className="text-2xl mt-4">Stay Tuned</p>
+                <p className="mt-4 text-2xl">Stay Tuned</p>
             </div>
         </>
     )
