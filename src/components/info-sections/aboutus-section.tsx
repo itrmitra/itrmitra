@@ -16,15 +16,23 @@ export default function AboutUsSection() {
                     </h1>
                     <ul className="mb-8 space-y-4 text-sm md:text-base lg:text-lg">
                         <li className="flex items-start gap-2">
-                            <CheckCircle size={24} />
-                            Team of experts in Indian Tax Laws
+                            <div className="min-w-8 h-8">
+                                <CheckCircle className="text-brand md:h-6 md:w-6" />
+                            </div>
+                            <span className="inline-block align-text-top">
+                                Team of experts in Indian Tax Laws
+                            </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <CheckCircle size={24} />
+                            <div className="min-w-8 h-8">
+                                <CheckCircle className="text-brand md:h-6 md:w-6" />
+                            </div>
                             Your data is safe with us
                         </li>
                         <li className="flex items-start gap-2">
-                            <CheckCircle size={24} />
+                            <div className="min-w-8 h-8">
+                                <CheckCircle className="text-brand md:h-6 md:w-6" />
+                            </div>
                             Client satisfaction is our top priority
                         </li>
                     </ul>
