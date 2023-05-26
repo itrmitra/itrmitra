@@ -13,6 +13,9 @@ module.exports = {
             },
         },
         extend: {
+            scale: {
+                "-100": "-1",
+            },
             keyframes: {
                 slideDownAndFade: {
                     from: { opacity: 0, transform: "translateY(-2px)" },
@@ -64,6 +67,16 @@ module.exports = {
             textColor: {
                 primary: "var(--dark-gray)",
                 brand: "var(--brand-color)",
+            },
+            fill: {
+                brand: "var(--brand-color)",
+                "light-brand": "var(--light-brand-color)",
+                "dark-gray": "var(--dark-gray)",
+            },
+            stroke: {
+                brand: "var(--brand-color)",
+                "light-brand": "var(--light-brand-color)",
+                "dark-gray": "var(--dark-gray)",
             },
         },
     },
