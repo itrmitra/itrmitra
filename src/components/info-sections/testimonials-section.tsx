@@ -40,7 +40,7 @@ function TestimonialCard({
     return (
         <figure
             className={cn(
-                "flex h-fit flex-col justify-center space-y-6 rounded-lg border border-gray-100 bg-gray-100 p-8 shadow-lg",
+                "flex h-fit flex-col justify-center space-y-6 rounded-lg border border-gray-100 bg-white p-8 shadow-lg",
                 className
             )}
         >
