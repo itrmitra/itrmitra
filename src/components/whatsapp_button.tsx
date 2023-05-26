@@ -9,7 +9,7 @@ const WhatsappButton = ({ className }: { className?: string }) => {
             target="_blank"
             className={cn(
                 buttonVariants({ variant: "filled" }),
-                "gap-2 bg-white text-primary",
+                "z-0 gap-2 bg-white text-primary",
                 className
             )}
         >
