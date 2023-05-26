@@ -30,7 +30,7 @@ const items = [
 export function SiteHeader() {
     const router = useRouter()
     return (
-        <header className="sticky top-0 z-50 border-b bg-gray-100/50 backdrop-blur-3xl">
+        <header className="sticky top-0 z-50 border-b bg-gray-100/50 backdrop-blur-lg">
             <div className="flex h-20 items-center justify-between px-8 lg:container sm:px-16 lg:px-0">
                 <Link href="/">
                     <h1 className="text-2xl font-extrabold tracking-tighter">ITR Mitra</h1>
