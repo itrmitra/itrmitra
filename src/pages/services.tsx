@@ -6,9 +6,18 @@ export default function Services() {
     return (
         <>
             <title>ITR Mitra | Services</title>
+            <meta
+                name="description"
+                content="ITR Mitra provides six types of services including Capital Gain Plan, Future & Options Plan and NRI having Foreign Income."
+            />
             <div className="min-h-screen px-8 py-12">
+                <h1 className="mb-8 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
+                    Services
+                </h1>
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {services.map((item) => ServiceCard({ ...item }))}
+                    {services.map((item) => (
+                        <ServiceCard {...item} key={item.name} />
+                    ))}
                 </div>
             </div>
         </>
@@ -26,7 +35,7 @@ function ServiceCard({
 }) {
     return (
         <div className="rounded-lg bg-white p-8 shadow-lg shadow-gray-200">
-            <h3 className="mb-8 text-xl font-bold md:text-2xl">{name}</h3>
+            <h1 className="mb-8 text-xl font-bold md:text-2xl">{name}</h1>
             <div className="space-y-2">
                 {features.map((item, idx) => (
                     <div className="flex items-start gap-2 text-sm md:text-base">

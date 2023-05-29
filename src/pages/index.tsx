@@ -5,15 +5,14 @@ import FormFilingSection from "../components/info-sections/form-filing-section"
 import TestimonialsSection from "../components/info-sections/testimonials-section"
 import FaqSection from "../components/info-sections/faq-section"
 
-export const metadata: Metadata = {
-    title: "ITR Mitra",
-    description: "ITR Mitra helps in filing taxation and with the whole ITR filing process.",
-}
-
 export default function Home() {
     return (
         <>
             <title>ITR Mitra | Home</title>
+            <meta
+                name="description"
+                content="ITR Mitra helps in filing Income Tax Returns and provides expert assistance with the whole ITR filing process."
+            />
             <LandingSection />
             <FormFilingSection />
             <AboutUsSection />
