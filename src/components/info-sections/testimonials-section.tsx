@@ -8,7 +8,7 @@ export default function TestimonialsSection() {
             <h1 className="mx-auto mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                 Testimonials
             </h1>
-            <p className="mx-auto text-center text-xl tracking-tight md:text-2xl lg:text-3xl">
+            <p className="mx-auto text-center text-xl font-light tracking-tight md:text-2xl lg:text-3xl">
                 We have worked with hundreds of amazing people
             </p>
             <div className="mt-8 space-y-4 md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-3">
@@ -48,7 +48,13 @@ function TestimonialCard({
                 <p>"{text}"</p>
             </blockquote>
             <figcaption className="flex flex-col  items-center gap-2 md:flex-row">
-                {imageUrl && <img src={imageUrl} className="h-10 w-10 rounded-full object-cover" />}
+                {imageUrl && (
+                    <img
+                        src={imageUrl}
+                        className="h-10 w-10 rounded-full object-cover"
+                        alt={name}
+                    />
+                )}
                 {!imageUrl && (
                     <div className="grid h-10 w-10 place-items-center rounded-full bg-brand object-cover font-bold text-white">
                         <span>{name.charAt(0)}</span>
@@ -56,7 +62,7 @@ function TestimonialCard({
                 )}
                 <div className="inline-block text-xs font-bold md:flex-1 md:text-sm">{name}</div>
                 <div className="flex items-center">
-                    <img src="/google.svg" className="mr-2 h-6" />
+                    <img src="/google.svg" className="mr-2 h-6" alt="Google Logo" />
                     {...stars}
                 </div>
             </figcaption>
