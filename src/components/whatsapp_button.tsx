@@ -6,6 +6,8 @@ const WhatsappButton = ({ className }: { className?: string }) => {
     return (
         <a
             href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`}
+            role="button"
+            aria-label="Connect on Whatsapp button"
             target="_blank"
             className={cn(
                 buttonVariants({ variant: "filled" }),
@@ -14,7 +16,7 @@ const WhatsappButton = ({ className }: { className?: string }) => {
             )}
         >
             Connect on
-            <img src="/whatsapp.svg" className="h-7 w-7" />
+            <img src="/whatsapp.svg" className="h-7 w-7" alt="Whatsapp Logo" />
         </a>
     )
 }
