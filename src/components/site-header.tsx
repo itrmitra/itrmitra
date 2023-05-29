@@ -42,7 +42,10 @@ export function SiteHeader() {
                 <div className="md:hidden">
                     <DropdownMenu.Root>
                         <DropdownMenu.Trigger asChild>
-                            <button className={buttonVariants({ variant: "icon", size: "icon" })}>
+                            <button
+                                className={buttonVariants({ variant: "icon", size: "icon" })}
+                                aria-label="Menu Button"
+                            >
                                 <Menu />
                             </button>
                         </DropdownMenu.Trigger>
