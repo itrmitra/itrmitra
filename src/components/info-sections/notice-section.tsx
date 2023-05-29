@@ -16,14 +16,14 @@ export default function NoticeSection() {
                             href={`https://mail.google.com/mail/?view=cm&fs=1&to=${process.env.NEXT_PUBLIC_EMAIL}&su=NOTICE+ITR+MITRA`}
                         >
                             Share Notice
-                            <img src="/gmail.svg" className="h-6 w-6" />
+                            <img src="/gmail.svg" className="h-6 w-6" alt="Gmail Logo" />
                         </a>
                         <WhatsappButton />
                     </div>
                 </div>
             </div>
             <div className="mb-8 flex-1 md:mb-0">
-                <img src="/notice.svg" className="h-52 md:h-auto" />
+                <img src="/notice.svg" className="h-52 md:h-auto" alt="Notice Mail" />
             </div>
         </div>
     )

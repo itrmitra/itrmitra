@@ -15,7 +15,11 @@ export default function LandingSection() {
                 </div>
             </div>
             <div className="mb-8 flex-1 md:mb-0">
-                <img src="/personal-finance.svg" className="h-52 md:h-auto" />
+                <img
+                    src="/personal-finance.svg"
+                    className="h-52 md:h-auto"
+                    alt="Personal Finance"
+                />
             </div>
         </div>
     )

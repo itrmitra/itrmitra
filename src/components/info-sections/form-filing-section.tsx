@@ -67,7 +67,7 @@ export default function FormFilingSection() {
     return (
         <div className="flex flex-col items-center bg-light-brand px-8 py-12 md:min-h-screen md:flex-row md:justify-between">
             <div className="flex-1">
-                <img src="/mail.svg" className="h-52 md:mx-auto md:h-auto" />
+                <img src="/mail.svg" className="h-52 md:mx-auto md:h-auto" alt="Sending Mail" />
             </div>
             <div className="z-0 mb-8 flex-1 sm:px-0 md:mb-0">
                 <h1 className="mb-4 text-4xl font-extrabold tracking-tighter md:text-5xl">
