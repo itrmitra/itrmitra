@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority"
 
 const defaultStyles =
-    "h-12 rounded-md transition-all duration-200 font-bold flex items-center text-sm md:text-base disabled:bg-gray-400 disabled:text-primary"
+    "h-12 rounded-lg transition-all font-bold flex items-center text-sm md:text-base disabled:bg-gray-400 disabled:text-primary"
 
 const variantStyles = {
     filled: "bg-brand text-white hover:bg-brand/90 hover:shadow-md hover:-translate-y-1",
