@@ -10,7 +10,7 @@ export default function NoticeSection() {
                     <h1 className="mb-8 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-start md:text-5xl lg:text-6xl">
                         Notice Received from the Income Tax Department? We're Here to Assist You!
                     </h1>
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-col items-center gap-4 md:flex-row">
                         <a
                             className={cn(buttonVariants(), "gap-2 bg-white text-primary")}
                             href={`https://mail.google.com/mail/?view=cm&fs=1&to=${process.env.NEXT_PUBLIC_EMAIL}&su=NOTICE+ITR+MITRA`}
