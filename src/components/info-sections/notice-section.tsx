@@ -4,7 +4,7 @@ import WhatsappButton from "../whatsapp_button"
 
 export default function NoticeSection() {
     return (
-        <div className="flex flex-col-reverse items-center py-8 md:min-h-screen md:flex-row md:py-0">
+        <div className="flex flex-col-reverse items-center py-12 md:min-h-screen md:flex-row md:py-0">
             <div className="flex-1">
                 <div className="mx-auto flex w-3/4 flex-col items-center text-center md:items-start md:text-start">
                     <h1 className="mb-8 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-start md:text-5xl lg:text-6xl">
