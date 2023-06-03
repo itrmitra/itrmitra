@@ -1,21 +1,16 @@
 import Link from "next/link"
 import { cn } from "../lib/utils"
-
-export interface NavItem {
-    title: string
-    href: string
-}
+import { siteConfig } from "../data/siteconfig"
 
 interface MainNavProps {
-    items: NavItem[]
     currentHref: string
 }
 
-export function MainNav({ items, currentHref }: MainNavProps) {
+export function MainNav({ currentHref }: MainNavProps) {
     return (
         <nav className="hidden items-center justify-evenly space-x-12 px-8 text-sm md:flex">
             <>
-                {items.map((item) => (
+                {siteConfig.tabs.map((item) => (
                     <Link
                         key={item.href}
                         href={item.href}

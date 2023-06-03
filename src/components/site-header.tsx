@@ -7,25 +7,7 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 
 import { Menu } from "lucide-react"
 import WhatsappButton from "./whatsapp_button"
-
-const items = [
-    {
-        title: "Home",
-        href: "/",
-    },
-    {
-        title: "Services",
-        href: "/services",
-    },
-    {
-        title: "Notices",
-        href: "/notices",
-    },
-    {
-        title: "About Us",
-        href: "/about-us",
-    },
-]
+import { siteConfig } from "../data/siteconfig"
 
 export function SiteHeader() {
     const router = useRouter()
@@ -35,7 +17,7 @@ export function SiteHeader() {
                 <Link href="/">
                     <h1 className="text-2xl font-extrabold tracking-tighter">ITR Mitra</h1>
                 </Link>
-                <MainNav items={items} currentHref={router.pathname} />
+                <MainNav currentHref={router.pathname} />
                 <div className="hidden md:block">
                     <WhatsappButton />
                 </div>
@@ -56,7 +38,7 @@ export function SiteHeader() {
                                 sideOffset={4}
                             >
                                 <>
-                                    {items.map((item) => (
+                                    {siteConfig.tabs.map((item) => (
                                         <DropdownMenu.Item
                                             key={item.href}
                                             asChild
