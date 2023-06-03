@@ -34,7 +34,7 @@ function ServiceCard({
     features: string[]
 }) {
     return (
-        <div className="rounded-lg bg-white p-8 shadow-lg shadow-gray-200">
+        <div className="rounded-xl bg-white p-8 shadow-lg">
             <h1 className="mb-8 text-xl font-bold md:text-2xl">{name}</h1>
             <div className="space-y-2">
                 {features.map((item, idx) => (
