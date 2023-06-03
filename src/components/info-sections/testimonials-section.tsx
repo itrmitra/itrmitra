@@ -4,7 +4,7 @@ import { testimonials } from "../../data/testimonials"
 
 export default function TestimonialsSection() {
     return (
-        <div className="flex flex-col bg-light-brand px-8 py-12 md:min-h-screen md:px-12">
+        <div className="flex flex-col border-b px-8 py-12 md:min-h-screen md:px-12">
             <h1 className="mx-auto mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                 Testimonials
             </h1>
