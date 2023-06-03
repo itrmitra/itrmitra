@@ -11,7 +11,7 @@ export default function TestimonialsSection() {
             <p className="mx-auto text-center text-xl font-light tracking-tight md:text-2xl lg:text-3xl">
                 We have worked with hundreds of amazing people
             </p>
-            <div className="mt-8 space-y-4 md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+            <div className="mt-8 space-y-6 md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-3">
                 {testimonials.map((testimony) => (
                     <TestimonialCard key={testimony.name} {...testimony} />
                 ))}
@@ -40,7 +40,7 @@ function TestimonialCard({
     return (
         <figure
             className={cn(
-                "flex h-fit flex-col justify-center space-y-6 rounded-lg border border-gray-100 bg-white p-8 shadow-lg",
+                "flex h-fit flex-col justify-center space-y-6 rounded-xl bg-white p-8 shadow-lg",
                 className
             )}
         >
