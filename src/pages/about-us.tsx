@@ -43,6 +43,12 @@ export default function AboutUs() {
                     ))}
                 </div>
             </div>
+            <div className="mx-auto px-8 py-12 md:w-1/2">
+                <h1 className="text-center text-lg font-light md:text-3xl">
+                    Join ITR Mitra today and experience a new era of effortless tax preparation.
+                    Together, we'll conquer your tax challenges and embrace financial success.
+                </h1>
+            </div>
         </>
     )
 }
