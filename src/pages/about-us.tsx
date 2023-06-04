@@ -6,7 +6,7 @@ export default function AboutUs() {
             <title>ITR Mitra | About Us</title>
             <meta
                 name="description"
-                content="ITR Mitra is a initiative of experts in Income Tax Filing processess."
+                content="ITR Mitra is group of Tax Experts having industry experience. We care about your privacy and confidentiality of your data."
             />
             <div className="flex flex-col-reverse items-center py-12 md:min-h-screen md:flex-row md:py-0">
                 <div className="flex-1">
