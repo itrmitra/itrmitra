@@ -4,7 +4,8 @@ interface FormState {
     email: string
     phone: string
     query: string
-    type: "FILE ITR" | "CONSULTANCY"
+    type?: "FILE ITR" | "CONSULTANCY"
+    sourceOfIncome: { [key: string]: boolean }
 }
 
 const url = "https://api.brevo.com/v3/smtp/email"
@@ -24,13 +25,19 @@ export const sendEmail = async (state: FormState) => {
         ],
         subject: "ITR MITRA - " + state.type,
         htmlContent: `
-        ${state.name}\n
-        ${state.phone}\n\n
+        <html>
+        <body>
+        <b>Name: </b>${state.name}<br>
+        <b>Phone Number: </b>${state.phone}<br>
+        <b>Source Of Income: </b><br>
+        ${Object.keys(state.sourceOfIncome).join("<br>")}
+        <br>
+        <b>Message: </b><br>
         ${state.query}
+        </body>
+        </html>
         `,
     }
-
-    console.log("Email api key : ", process.env.NEXT_PUBLIC_EMAIL_API_KEY)
 
     const result = await axios.post(url, data, {
         headers: {
