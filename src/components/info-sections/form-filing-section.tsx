@@ -3,13 +3,33 @@ import { buttonVariants } from "../ui/button"
 import { sendEmail } from "../../lib/sendEmail"
 import { cn } from "../../lib/utils"
 import { inputVariants } from "../ui/input"
+import { Info } from "lucide-react"
+
+const sourceOfIncomeOptions = [
+    "Salary/ Pension",
+    "Rent Income / Home loan interest",
+    "Business / Professional",
+    "Capital gain from shares, Property, Mutual Funds",
+    "Crypto Income/ Loss",
+    "Future and Options",
+    "Income from outside India",
+    "Interest, Dividend, Lottery Income.",
+]
+
+const sourceOf = {
+    console: {
+        d: true,
+        f: false,
+    },
+}
 
 interface FormDataType {
     name: string
     email: string
     phone: string
     query: string
-    type: "FILE ITR" | "CONSULTANCY"
+    type?: "FILE ITR" | "CONSULTANCY"
+    sourceOfIncome: { [key: string]: boolean }
 }
 
 export default function FormFilingSection() {
@@ -18,9 +38,12 @@ export default function FormFilingSection() {
         email: "",
         phone: "",
         query: "",
-        type: "FILE ITR",
+        type: undefined,
+        sourceOfIncome: {},
     })
     const [error, setError] = useState("")
+    const [sourceOfIncomeError, setSourceOfIncomeError] = useState("")
+
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
 
@@ -31,13 +54,18 @@ export default function FormFilingSection() {
 
         let re = /^\d{10}$/
         if (!re.test(formState.phone)) {
-            setError((prev) => "Phone Number is not valid")
+            setError((prev) => "Invalid Phone Number")
             return
         }
 
         let emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
         if (!emailReg.test(formState.email)) {
-            setError((prev) => "Email is not valid")
+            setError((prev) => "Invalid Email")
+            return
+        }
+
+        if (Object.keys(formState.sourceOfIncome).length === 0) {
+            setSourceOfIncomeError((prev) => "Please check at least one option")
             return
         }
 
@@ -53,6 +81,7 @@ export default function FormFilingSection() {
                 phone: "",
                 query: "",
                 type: "FILE ITR",
+                sourceOfIncome: {},
             })
         }
         setLoading(false)
@@ -63,6 +92,18 @@ export default function FormFilingSection() {
             ...prev,
             [event.target.name]: event.target.value,
         }))
+    }
+
+    const onSourceOfIncomeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setFormState((prev) => {
+            const newValue = structuredClone(prev.sourceOfIncome)
+            if (!event.target.checked) delete newValue[event.target.name]
+            else newValue[event.target.name] = true
+            return {
+                ...prev,
+                sourceOfIncome: newValue,
+            }
+        })
     }
     return (
         <div className="flex flex-col items-center bg-light-brand px-8 py-12 md:min-h-screen md:flex-row md:justify-between">
@@ -78,7 +119,7 @@ export default function FormFilingSection() {
                     className="flex flex-col gap-4 text-sm md:w-3/4 md:text-base"
                 >
                     <div className="flex flex-col gap-2">
-                        <label htmlFor="fullname" className="font-bold">
+                        <label htmlFor="fullname" className="font-semibold">
                             Name
                         </label>
                         <input
@@ -92,7 +133,7 @@ export default function FormFilingSection() {
                         />
                     </div>
                     <div className="flex flex-col gap-2">
-                        <label htmlFor="fullname" className="font-bold">
+                        <label htmlFor="fullname" className="font-semibold">
                             Email *
                         </label>
                         <input
@@ -106,7 +147,7 @@ export default function FormFilingSection() {
                         />
                     </div>
                     <div className="flex flex-col gap-2">
-                        <label htmlFor="fullname" className="font-bold">
+                        <label htmlFor="fullname" className="font-semibold">
                             Phone Number *
                         </label>
                         <input
@@ -120,7 +161,7 @@ export default function FormFilingSection() {
                         />
                     </div>
                     <div className="flex flex-col gap-2">
-                        <label htmlFor="query" className="font-bold">
+                        <label htmlFor="query" className="font-semibold">
                             Message
                         </label>
                         <textarea
@@ -133,9 +174,12 @@ export default function FormFilingSection() {
                         />
                     </div>
                     {error.length > 0 && (
-                        <p className="bg-sky-500 text-sm font-bold text-red-500">{error}</p>
+                        <p className="flex w-fit items-center gap-2 rounded-md bg-red-600 p-2 text-sm font-bold text-white shadow-sm">
+                            <Info strokeWidth={2} className="h-6 w-6 text-white" />
+                            {error}
+                        </p>
                     )}
-                    <div className="mb-6 flex gap-4 font-bold">
+                    <div className="mb-2 flex gap-4 font-bold">
                         <div className="flex gap-2">
                             <input
                                 required
@@ -145,7 +189,7 @@ export default function FormFilingSection() {
                                 value="FILE ITR"
                                 onChange={onChange}
                             />
-                            <label htmlFor="fileitr" className="cursor-pointer">
+                            <label htmlFor="fileitr" className="cursor-pointer font-semibold">
                                 I want to file ITR
                             </label>
                         </div>
@@ -159,11 +203,41 @@ export default function FormFilingSection() {
                                 onChange={onChange}
                                 className=""
                             />
-                            <label htmlFor="consultancy" className="cursor-pointer">
+                            <label htmlFor="consultancy" className="cursor-pointer font-semibold">
                                 I need Consultancy
                             </label>
                         </div>
                     </div>
+
+                    {formState.type === "FILE ITR" && (
+                        <div>
+                            <h1 className="mb-2 font-semibold">
+                                Source Of Income{" "}
+                                <span className="text-sm font-normal">(Required)</span>
+                            </h1>
+                            <p className="mb-4 text-sm font-semibold text-red-600">
+                                {sourceOfIncomeError}
+                            </p>
+                            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                                {sourceOfIncomeOptions.map((item) => (
+                                    <div className="flex items-start gap-2">
+                                        <input
+                                            id={item}
+                                            type="checkbox"
+                                            name={item}
+                                            value={item}
+                                            className="mt-1"
+                                            checked={formState.sourceOfIncome[item]}
+                                            onChange={onSourceOfIncomeChange}
+                                        />
+                                        <label htmlFor={item} className="inline-block">
+                                            {item}
+                                        </label>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                     <div className="space-y-4">
                         <button type="submit" className={buttonVariants()} disabled={loading}>
                             {loading ? "Loading..." : "Get Started"}
