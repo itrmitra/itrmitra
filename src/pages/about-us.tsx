@@ -33,13 +33,13 @@ export default function AboutUs() {
                 </h1>
                 <div className="mt-8 flex flex-col gap-6 md:flex-row">
                     {aboutus.slice(0, -2).map((item) => (
-                        <FeatureCard {...item} />
+                        <FeatureCard key={item.title} {...item} />
                     ))}
                 </div>
 
                 <div className="mt-6 flex flex-col items-stretch justify-center gap-6 md:flex-row">
                     {aboutus.slice(-2).map((item) => (
-                        <FeatureCard {...item} />
+                        <FeatureCard key={item.title} {...item} />
                     ))}
                 </div>
             </div>
@@ -57,17 +57,19 @@ function FeatureCard({
     title,
     imageUrl,
     content,
+    alt,
 }: {
     title: string
     imageUrl: string
     content: string
+    alt: string
 }) {
     return (
         <div
             key={title}
             className="basis-1/3 rounded-xl bg-white p-8 text-center shadow-lg transition-colors"
         >
-            {imageUrl && <img src={imageUrl} className="mx-auto mb-8 h-20" />}
+            {imageUrl && <img src={imageUrl} className="mx-auto mb-8 h-20" alt={alt} />}
             <h3 className="mb-2 text-lg font-semibold md:text-xl">{title}</h3>
             <p className="text-sm md:text-base">{content}</p>
         </div>
