@@ -9,7 +9,7 @@ export default function ItrBenefitsSection() {
             <div className="mx-auto w-full lg:w-3/4">
                 <div className="grid gap-6 md:grid-cols-3">
                     {benefits.map((item) => (
-                        <BenefitCard {...item} />
+                        <BenefitCard key={item.title} {...item} />
                     ))}
                 </div>
             </div>
