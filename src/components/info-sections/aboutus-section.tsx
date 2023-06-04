@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import { buttonVariants } from "../ui/button"
 import { cn } from "../../lib/utils"
@@ -36,9 +37,11 @@ export default function AboutUsSection() {
                             Client satisfaction is our top priority
                         </li>
                     </ul>
-                    <button className={cn(buttonVariants(), "gap-2")}>
-                        Know More <ArrowRight size={20} />
-                    </button>
+                    <Link href="/about-us">
+                        <button className={cn(buttonVariants(), "gap-2")}>
+                            Know More <ArrowRight size={20} />
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
