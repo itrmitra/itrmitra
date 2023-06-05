@@ -10,7 +10,7 @@ export default function Team() {
                     individual ideas into a functional and successful organization."
             />
             <div className="px-8 py-12 text-center md:min-h-screen md:text-left">
-                <h1 className=" mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
+                <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                     Meet Our Team
                 </h1>
                 <p className="mb-12 text-sm md:w-1/2 md:text-base lg:text-lg">

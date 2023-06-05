@@ -14,7 +14,7 @@ export default function AboutUs() {
                         <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                             Welcome to ITR Mitra
                         </h1>
-                        <p className="mb-8 text-sm md:text-base lg:text-lg">
+                        <p className="text-sm md:text-base lg:text-lg">
                             Your Tax Solution Companion! With 8 years of experience in the taxation
                             realm, we're thrilled to launch our online portal, bringing our
                             expertise to your fingertips. Backed by a team of competent tax
