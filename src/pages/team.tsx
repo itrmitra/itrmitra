@@ -34,6 +34,7 @@ function InfoCard({ name, intro, imageUrl }: { name: string; intro: string; imag
                 <img
                     src={imageUrl}
                     className="mx-auto h-36 w-36 rounded-full object-cover lg:h-full lg:w-56 lg:rounded-lg"
+                    alt={name}
                 />
             </div>
             <div className="flex-1 pt-6 text-center lg:pl-8 lg:pt-0 lg:text-left">
