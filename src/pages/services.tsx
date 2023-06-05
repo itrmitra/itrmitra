@@ -1,4 +1,4 @@
-import { CheckCircle, CheckCircle2 } from "lucide-react"
+import { CheckCircle2 } from "lucide-react"
 import { services } from "../data/services"
 import { cn } from "../lib/utils"
 
