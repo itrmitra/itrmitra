@@ -12,12 +12,12 @@ export function SiteFooter() {
             <div className="flex justify-center gap-16 md:flex-row">
                 <div>
                     <h1 className="mb-4 text-lg font-bold">Company</h1>
-                    <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                         {tabs.map((item) => (
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="text-sm underline-offset-2 hover:underline"
+                                className="py-1 text-sm underline-offset-2 hover:underline md:py-0"
                             >
                                 {item.title}
                             </Link>
