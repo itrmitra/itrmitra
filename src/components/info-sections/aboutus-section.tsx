@@ -5,7 +5,7 @@ import { cn } from "../../lib/utils"
 
 export default function AboutUsSection() {
     return (
-        <div className="flex flex-col items-center py-8 md:min-h-screen  md:flex-row md:py-0">
+        <div className="flex flex-col items-center bg-light-brand py-8  md:min-h-screen md:flex-row md:py-0">
             <div className="mb-8 flex-1 md:mb-0">
                 <img src="/meet-the-team.svg" className="h-52 md:h-auto" alt="Teamwork" />
             </div>
