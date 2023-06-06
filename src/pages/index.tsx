@@ -5,6 +5,7 @@ import FormFilingSection from "../components/info-sections/form-filing-section"
 import TestimonialsSection from "../components/info-sections/testimonials-section"
 import FaqSection from "../components/info-sections/faq-section"
 import ItrBenefitsSection from "../components/info-sections/itr-benefits-section"
+import ItrFilingProcessSection from "../components/info-sections/itr-filiing-process-section"
 
 export default function Home() {
     return (
@@ -18,6 +19,7 @@ export default function Home() {
             <FormFilingSection />
             <AboutUsSection />
             <ItrBenefitsSection />
+            <ItrFilingProcessSection />
             <TestimonialsSection />
             <FaqSection />
         </>
