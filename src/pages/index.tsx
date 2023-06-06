@@ -1,11 +1,10 @@
-import { Metadata } from "next"
-import LandingSection from "../components/info-sections/landing-section"
 import AboutUsSection from "../components/info-sections/aboutus-section"
-import FormFilingSection from "../components/info-sections/form-filing-section"
-import TestimonialsSection from "../components/info-sections/testimonials-section"
 import FaqSection from "../components/info-sections/faq-section"
+import FormFilingSection from "../components/info-sections/form-filing-section"
 import ItrBenefitsSection from "../components/info-sections/itr-benefits-section"
 import ItrFilingProcessSection from "../components/info-sections/itr-filiing-process-section"
+import LandingSection from "../components/info-sections/landing-section"
+import TestimonialsSection from "../components/info-sections/testimonials-section"
 
 export default function Home() {
     return (
@@ -17,9 +16,9 @@ export default function Home() {
             />
             <LandingSection />
             <FormFilingSection />
+            <ItrFilingProcessSection />
             <AboutUsSection />
             <ItrBenefitsSection />
-            <ItrFilingProcessSection />
             <TestimonialsSection />
             <FaqSection />
         </>
