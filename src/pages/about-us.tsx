@@ -69,7 +69,7 @@ function FeatureCard({
             key={title}
             className="basis-1/3 rounded-xl bg-white p-8 text-center shadow-lg transition-colors"
         >
-            {imageUrl && <img src={imageUrl} className="mx-auto mb-8 h-20" alt={alt} />}
+            {imageUrl && <img src={imageUrl} className="mx-auto mb-8 h-24" alt={alt} />}
             <h3 className="mb-2 text-lg font-semibold md:text-xl">{title}</h3>
             <p className="text-sm md:text-base">{content}</p>
         </div>
