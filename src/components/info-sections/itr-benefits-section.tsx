@@ -2,7 +2,7 @@ import { benefits } from "../../data/benefits"
 
 export default function ItrBenefitsSection() {
     return (
-        <div className="flex flex-col bg-light-brand px-8 py-12">
+        <div className="flex flex-col px-8 py-12">
             <h1 className="mx-auto mb-8 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                 Benefits of Filing ITR
             </h1>
