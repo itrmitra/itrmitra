@@ -34,9 +34,8 @@ export function SiteFooter() {
                             <div className="md:w-52">
                                 <b>Office 1 (Main Office):</b>
                                 <p className="text-xs">
-                                    Office no 5, Laxminarayan Co-Op Hsg Society, Burning Ghat Rd,
-                                    near Bank Of Maharashtra, Ragvilas Society, Koregaon Park, Pune,
-                                    Maharashtra 411001
+                                    Office no.5,Building no.2, new Laxmi narayan Park, Koregaon
+                                    park, Pune- 411001
                                 </p>
                             </div>
                             <div className="md:w-52">
