@@ -7,7 +7,7 @@ const variantStyles = {
     filled: "bg-brand text-white hover:bg-brand/90 hover:shadow-md hover:-translate-y-1",
     outlined: "border-2 border-brand hover:bg-brand hover:text-white",
     link: "hover:border-b-2",
-    icon: "aspect-square rounded-full hover:bg-brand outline-none",
+    icon: "aspect-square rounded-full hover:bg-brand hover:text-white outline-none",
 }
 
 const sizeStyles = {
