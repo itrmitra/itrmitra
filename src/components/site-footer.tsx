@@ -29,8 +29,8 @@ export function SiteFooter() {
                     <div className="mt-8 md:mt-0">
                         <h1 className="mb-4 font-bold">Contact Us</h1>
                         <div className="space-y-4 text-sm">
-                            <p>Phone: 9359412287</p>
-                            <p>Email: itrmitra@gmail.com</p>
+                            <p>Phone: {process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}</p>
+                            <p>Email: {process.env.NEXT_PUBLIC_EMAIL}</p>
                             <div className="md:w-52">
                                 <b>Office 1 (Main Office):</b>
                                 <p className="text-xs">
