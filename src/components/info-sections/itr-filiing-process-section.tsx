@@ -4,10 +4,13 @@ import { filingProcess } from "../../data/filing-process"
 export default function ItrFilingProcessSection() {
     return (
         <div className="flex flex-col items-center px-8 py-12 md:min-h-screen md:px-12">
-            <div className="text-center">
-                <h1 className="mx-auto mb-12 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
+            <div className="mb-12 text-center">
+                <h1 className="mx-auto mb-4 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                     Seamless ITR Filing Process
                 </h1>
+                <p className="mx-auto text-center text-xl font-light tracking-tight md:text-2xl lg:text-3xl">
+                    Our simple 6-step process is the easiest way to file your taxes.
+                </p>
             </div>
             <div className="grid place-content-center place-items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {filingProcess.map((item, index) => (
