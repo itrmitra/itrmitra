@@ -1,4 +1,3 @@
-import axios from "axios"
 interface FormState {
     name: string
     email: string
@@ -8,7 +7,6 @@ interface FormState {
     sourceOfIncome: { [key: string]: boolean }
 }
 
-const url = "https://api.brevo.com/v3/smtp/email"
 const receiverEmail = "myitrmitra@gmail.com"
 
 export const sendEmail = async (state: FormState) => {
@@ -39,13 +37,7 @@ export const sendEmail = async (state: FormState) => {
         `,
     }
 
-    const result = await axios.post(url, data, {
-        headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-            "Api-Key": process.env.NEXT_PUBLIC_EMAIL_API_KEY,
-        },
-    })
+    const result = await fetch("/api/sendEmail", { method: "POST", body: JSON.stringify(data) })
 
     if (!(result.status >= 200 && result.status < 300)) return false
     return true
