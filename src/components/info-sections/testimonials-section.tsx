@@ -4,7 +4,7 @@ import { testimonials } from "../../data/testimonials"
 
 export default function TestimonialsSection() {
     return (
-        <div className="flex flex-col border-b px-8 py-12 md:min-h-screen md:px-12">
+        <div className="flex flex-col border-b bg-light-brand px-8 py-12 md:min-h-screen md:px-12">
             <h1 className="mx-auto mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                 Testimonials
             </h1>
@@ -40,11 +40,11 @@ function TestimonialCard({
     return (
         <figure
             className={cn(
-                "flex h-fit flex-col justify-center space-y-6 rounded-xl bg-white p-8 shadow-lg",
+                "flex h-fit flex-col justify-center space-y-6 rounded-xl bg-white p-4 shadow-lg lg:p-8",
                 className
             )}
         >
-            <blockquote className="text-sm md:text-base lg:text-lg">
+            <blockquote className="text-center text-sm md:text-base lg:text-lg">
                 <p>"{text}"</p>
             </blockquote>
             <figcaption className="flex flex-col  items-center gap-2 md:flex-row">
