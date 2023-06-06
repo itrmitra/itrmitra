@@ -8,10 +8,10 @@ export default function TestimonialsSection() {
             <h1 className="mx-auto mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                 Testimonials
             </h1>
-            <p className="mx-auto text-center text-xl font-light tracking-tight md:text-2xl lg:text-3xl">
+            <p className="mx-auto mb-12 text-center text-xl font-light tracking-tight md:text-2xl lg:text-3xl">
                 We have worked with hundreds of amazing people
             </p>
-            <div className="mt-8 space-y-6 md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {testimonials.map((testimony) => (
                     <TestimonialCard key={testimony.name} {...testimony} />
                 ))}
@@ -40,7 +40,7 @@ function TestimonialCard({
     return (
         <figure
             className={cn(
-                "flex h-fit flex-col justify-center space-y-6 rounded-xl bg-white p-4 shadow-lg lg:p-8",
+                "flex flex-col justify-center space-y-6 place-self-start rounded-xl bg-white p-4 shadow-lg lg:p-8",
                 className
             )}
         >
