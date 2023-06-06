@@ -7,8 +7,6 @@ interface FormState {
     sourceOfIncome: { [key: string]: boolean }
 }
 
-const receiverEmail = "myitrmitra@gmail.com"
-
 export const sendEmail = async (state: FormState) => {
     const data = {
         sender: {
@@ -17,7 +15,7 @@ export const sendEmail = async (state: FormState) => {
         },
         to: [
             {
-                email: receiverEmail,
+                email: process.env.NEXT_PUBLIC_EMAIL,
                 name: "ITR Mitra",
             },
         ],

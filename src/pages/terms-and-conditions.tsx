@@ -187,13 +187,20 @@ export default function Pricing() {
                                 periodically.
                             </p>
                         </li>
+                        <li>
+                            <b>11. Payment Terms:</b>
+                            <p>
+                                You agree to pay 100% advance fees prior to any processing or
+                                changes to any of the provided documents.
+                            </p>
+                        </li>
                     </ul>
 
                     <p className="mt-4">
                         By accessing or using our website, you acknowledge that you have read,
                         understood, and agreed to be bound by these terms and conditions. If you
                         have any questions or concerns regarding this Agreement, please contact us
-                        at myitrmitra@gmail.com
+                        at {process.env.NEXT_PUBLIC_EMAIL}
                     </p>
                 </div>
             </div>
