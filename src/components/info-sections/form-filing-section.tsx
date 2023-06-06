@@ -111,8 +111,8 @@ export default function FormFilingSection() {
                 <img src="/mail.svg" className="h-52 md:mx-auto md:h-auto" alt="Sending Mail" />
             </div>
             <div className="z-0 mb-8 flex-1 sm:px-0 md:mb-0">
-                <h1 className="mb-4 text-4xl font-extrabold tracking-tighter md:text-5xl">
-                    Connect me with ITR Mitra
+                <h1 className="mb-4 text-center text-4xl font-extrabold tracking-tighter md:text-left md:text-5xl">
+                    Connect me with <span className="inline-block">ITR Mitra</span>
                 </h1>
                 <form
                     onSubmit={onSubmit}
@@ -130,6 +130,7 @@ export default function FormFilingSection() {
                             placeholder="Full Name"
                             onChange={onChange}
                             className={cn(inputVariants())}
+                            maxLength={256}
                         />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -158,6 +159,8 @@ export default function FormFilingSection() {
                             placeholder="Phone Number (required)"
                             onChange={onChange}
                             className={cn(inputVariants())}
+                            minLength={10}
+                            maxLength={10}
                         />
                     </div>
                     <div className="flex flex-col gap-2">
