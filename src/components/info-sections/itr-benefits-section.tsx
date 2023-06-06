@@ -19,9 +19,9 @@ export default function ItrBenefitsSection() {
 
 function BenefitCard({ title, content }: { title: string; content: string }) {
     return (
-        <div className="rounded-xl bg-white p-8 shadow-lg">
+        <div className="rounded-xl bg-white p-4 shadow-lg lg:p-8">
             <h1 className="mb-2 text-xl font-semibold md:text-2xl">{title}</h1>
-            <p className="text-sm md:text-base">{content}</p>
+            <p className="text-sm md:text-lg">{content}</p>
         </div>
     )
 }
