@@ -52,20 +52,28 @@ export default function FormFilingSection() {
         setError((prev) => "")
         setSuccess((prev) => false)
 
-        let re = /^\d{10}$/
-        if (!re.test(formState.phone)) {
+        let nameRegex = /^[a-zA-Z]([-']?[a-zA-Z]+)*( [a-zA-Z]([-']?[a-zA-Z]+)*){1,2}$/
+        if (!nameRegex.test(formState.name)) {
+            console.log("Error Name")
+            setError((prev) => "Name must contain a first name and a last name")
+            return
+        }
+
+        let phoneNumberRegex = /^\d{10}$/
+        if (!phoneNumberRegex.test(formState.phone)) {
             setError((prev) => "Invalid Phone Number")
             return
         }
 
-        let emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-        if (!emailReg.test(formState.email)) {
+        let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        if (!emailRegex.test(formState.email)) {
             setError((prev) => "Invalid Email")
             return
         }
 
-        if (Object.keys(formState.sourceOfIncome).length === 0) {
-            setSourceOfIncomeError((prev) => "Please check at least one option")
+        let queryRegex = /^[a-zA-Z0-9_\s]*$/
+        if (!queryRegex.test(formState.query)) {
+            setError((prev) => "Message must contain only letters and numbers")
             return
         }
 
