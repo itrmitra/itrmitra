@@ -80,7 +80,7 @@ export default function FormFilingSection() {
                 email: "",
                 phone: "",
                 query: "",
-                type: "FILE ITR",
+                type: undefined,
                 sourceOfIncome: {},
             })
         }
@@ -191,6 +191,7 @@ export default function FormFilingSection() {
                                 name="type"
                                 value="FILE ITR"
                                 onChange={onChange}
+                                checked={formState.type === "FILE ITR"}
                             />
                             <label htmlFor="fileitr" className="cursor-pointer font-semibold">
                                 I want to file ITR
@@ -204,6 +205,7 @@ export default function FormFilingSection() {
                                 name="type"
                                 value="CONSULTANCY"
                                 onChange={onChange}
+                                checked={formState.type === "CONSULTANCY"}
                                 className=""
                             />
                             <label htmlFor="consultancy" className="cursor-pointer font-semibold">
