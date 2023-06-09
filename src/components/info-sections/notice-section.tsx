@@ -8,7 +8,8 @@ export default function NoticeSection() {
             <div className="flex-1">
                 <div className="mx-auto flex w-3/4 flex-col items-center text-center md:items-start md:text-start">
                     <h1 className="mb-8 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-start md:text-5xl lg:text-6xl">
-                        Notice Received from the Income Tax Department? We're Here to Assist You!
+                        Notice Received from the Income Tax Department? <br className="mb-4" />
+                        We're Here to Assist You!
                     </h1>
                     <div className="flex flex-col items-center gap-4 md:flex-row">
                         <a
