@@ -34,15 +34,15 @@ export function SiteFooter() {
                             <div className="md:w-52">
                                 <b>Office 1 (Main Office):</b>
                                 <p className="text-xs">
-                                    Office no.5,Building no.2, new Laxmi narayan Park, Koregaon
-                                    park, Pune- 411001
+                                    Office No.5, Building No.2, New Laxmi Narayan Park, <br />
+                                    Koregaon Park, Pune - 411001
                                 </p>
                             </div>
                             <div className="md:w-52">
                                 <b>Office 2 (Branch):</b>
                                 <p className="text-xs">
-                                    ITR Mitra, Near Basant Kirana, New Mondha, Parbhani,
-                                    Maharashtra 431401
+                                    ITR Mitra, Near Basant Kirana,
+                                    <br /> New Mondha, Parbhani, Maharashtra - 431401
                                 </p>
                             </div>
                         </div>
