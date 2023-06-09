@@ -11,6 +11,7 @@ export default function Home() {
         <>
             <title>ITR Mitra | Home</title>
             <meta
+                title="ITR Mitra | Your Personal Tax Filing Expert"
                 name="description"
                 content="ITR Mitra helps in filing Income Tax Returns and provides expert assistance with the whole ITR filing process."
             />

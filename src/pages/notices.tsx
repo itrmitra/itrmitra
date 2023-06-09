@@ -6,6 +6,7 @@ export default function Notices() {
         <>
             <title>ITR Mitra | Notices</title>
             <meta
+                title="ITR Mitra | Notices"
                 name="description"
                 content="ITR Mitra can help related to notices received from Income Tax Department of India."
             />

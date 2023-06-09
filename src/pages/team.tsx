@@ -5,6 +5,7 @@ export default function Team() {
         <>
             <title>ITR Mitra | Team</title>
             <meta
+                title="ITR Mitra | Team"
                 name="description"
                 content="Our team's creativity, innovation, and drive have helped us to transform
                     individual ideas into a functional and successful organization."

@@ -5,6 +5,7 @@ export default function AboutUs() {
         <>
             <title>ITR Mitra | About Us</title>
             <meta
+                title="ITR Mitra | About Us"
                 name="description"
                 content="ITR Mitra is group of Tax Experts having industry experience. We care about your privacy and confidentiality of your data."
             />

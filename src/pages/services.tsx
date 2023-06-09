@@ -7,6 +7,7 @@ export default function Services() {
         <>
             <title>ITR Mitra | Services</title>
             <meta
+                title="ITR Mitra | Services"
                 name="description"
                 content="ITR Mitra provides six types of services including Capital Gain Plan, Future & Options Plan and NRI having Foreign Income."
             />
