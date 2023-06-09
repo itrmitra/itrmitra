@@ -14,7 +14,10 @@ export function MainNav({ currentHref }: MainNavProps) {
                     <Link
                         key={item.href}
                         href={item.href}
-                        className={cn(currentHref == item.href && "font-bold text-brand")}
+                        className={cn(
+                            "font-medium decoration-1 underline-offset-4 hover:underline",
+                            currentHref == item.href && "font-bold text-brand"
+                        )}
                     >
                         {item.title}
                     </Link>
