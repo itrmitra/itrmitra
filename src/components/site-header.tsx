@@ -8,6 +8,7 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 import { Menu } from "lucide-react"
 import WhatsappButton from "./whatsapp_button"
 import { siteConfig } from "../data/siteconfig"
+import { Logo } from "./logo"
 
 export function SiteHeader() {
     const router = useRouter()
@@ -17,9 +18,7 @@ export function SiteHeader() {
     return (
         <header className="sticky top-0 z-50 border-b bg-gray-100/50 backdrop-blur-lg">
             <div className="flex h-20 items-center justify-between px-8 lg:container sm:px-16 lg:px-0">
-                <Link href="/">
-                    <h1 className="text-2xl font-extrabold tracking-tighter">ITR Mitra</h1>
-                </Link>
+                <Logo />
                 <MainNav currentHref={router.pathname} />
                 <div className="hidden md:block">
                     <WhatsappButton />

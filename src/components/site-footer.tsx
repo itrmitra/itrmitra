@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { siteConfig } from "../data/siteconfig"
+import { Logo } from "./logo"
 
 export function SiteFooter() {
     const tabs = siteConfig.tabs.slice()
@@ -10,7 +11,7 @@ export function SiteFooter() {
     )
     return (
         <footer className="bg-dark-gray px-8 py-12 text-white">
-            <div className="md:mx-auto md:flex md:justify-center lg:w-1/2">
+            <div className="md:mx-auto md:flex md:items-start md:justify-center lg:w-1/2">
                 <div className="grid justify-center gap-4 md:grid-cols-2">
                     <div>
                         <h1 className="mb-4 font-bold">Company</h1>
@@ -48,9 +49,7 @@ export function SiteFooter() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-8 md:mt-0">
-                    <h1 className="text-2xl font-extrabold tracking-tighter">ITR Mitra</h1>
-                </div>
+                <Logo />
             </div>
         </footer>
     )
