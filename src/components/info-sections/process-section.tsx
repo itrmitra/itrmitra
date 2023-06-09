@@ -3,7 +3,7 @@ import { notices } from "../../data/notices"
 
 export default function ProcessSection() {
     return (
-        <div className="flex flex-col items-center gap-8 bg-light-brand px-8 py-12 md:min-h-screen md:flex-row md:py-0">
+        <div className="flex flex-col items-center gap-8 bg-light-brand px-8 py-12 md:min-h-screen md:flex-row">
             <div className="mb-8 flex-1 md:mb-0">
                 <img
                     src="/key_points.svg"
@@ -13,6 +13,9 @@ export default function ProcessSection() {
             </div>
             <div className="flex-1">
                 <div className="flex flex-col">
+                    <h1 className="mb-12 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-left md:text-5xl lg:text-6xl">
+                        How we resolve your notices?
+                    </h1>
                     <ul className="relative flex flex-col">
                         {notices.map((item, index) => (
                             <>
