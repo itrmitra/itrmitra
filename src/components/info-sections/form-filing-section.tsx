@@ -131,11 +131,12 @@ export default function FormFilingSection() {
                             Name
                         </label>
                         <input
+                            required
                             id="fullname"
                             name="name"
                             type="text"
                             value={formState.name}
-                            placeholder="Full Name"
+                            placeholder="Full Name (required)"
                             onChange={onChange}
                             className={cn(inputVariants())}
                             maxLength={256}
