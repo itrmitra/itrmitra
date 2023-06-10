@@ -1,6 +1,6 @@
 export const benefits = [
     {
-        title: "Avoid late fee penalties",
+        title: "Avoid late fees and penalties",
         content: "Avoid a maximum penanlty of ₹10,000 if your annual income exceeds ₹5L",
     },
     {
