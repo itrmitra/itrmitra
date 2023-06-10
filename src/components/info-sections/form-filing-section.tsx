@@ -128,7 +128,7 @@ export default function FormFilingSection() {
                 >
                     <div className="flex flex-col gap-2">
                         <label htmlFor="fullname" className="font-semibold">
-                            Name
+                            Name *
                         </label>
                         <input
                             required
