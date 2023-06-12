@@ -82,13 +82,15 @@ function ServiceCard({
                     ))}
                 </ul>
                 {extraInfo && (
-                    <ul className="my-4 space-y-2">
-                        {extraInfo.map((item) => (
-                            <li key={item} className={cn("text-sm", highlight && "text-white")}>
-                                * {item}
-                            </li>
-                        ))}
-                    </ul>
+                    <div className="mb-8 mt-4">
+                        <ul className="space-y-2">
+                            {extraInfo.map((item) => (
+                                <li key={item} className={cn("text-sm", highlight && "text-white")}>
+                                    * {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 )}
                 <Link
                     href="/services"
