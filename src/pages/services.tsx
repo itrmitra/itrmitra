@@ -31,29 +31,44 @@ export default function Services() {
 
 function ServiceCard({
     name,
-    features,
-    mainFeatures,
+    usefulFor,
+    includes,
 }: {
     name: string
-    mainFeatures: number[]
-    features: string[]
+    usefulFor: string[]
+    includes?: string[]
 }) {
     return (
         <div className="rounded-xl bg-white p-8 shadow-lg">
             <h1 className="mb-4 text-xl font-bold md:text-2xl">{name}</h1>
-            <div className="space-y-2">
-                <p className="text-medium mb-4 text-sm md:text-base">Suited For:</p>
-                {features.map((item, idx) => (
-                    <div className="flex items-start gap-2 text-sm md:text-base">
-                        <div className="min-w-8 h-8">
-                            <CheckCircle2 className="fill-brand text-white md:h-6 md:w-6" />
-                        </div>
-                        <div className={cn(mainFeatures.indexOf(idx) != -1 && "font-semibold")}>
-                            {item}
-                        </div>
-                    </div>
-                ))}
+            <div className="mb-4 space-y-2">
+                <p className="mb-4 text-sm font-medium md:text-base">Useful For:</p>
+                <ul>
+                    {usefulFor.map((item, idx) => (
+                        <li className="ml-4 flex items-start gap-2 text-sm md:text-base">
+                            <div className="min-w-8 h-8">
+                                <CheckCircle2 className="fill-brand text-white md:h-6 md:w-6" />
+                            </div>
+                            <span className={cn()}>{item}</span>
+                        </li>
+                    ))}
+                </ul>
             </div>
+            {includes && (
+                <div className="space-y-2">
+                    <p className="mb-4 text-sm font-medium md:text-base">Includes:</p>
+                    <ul>
+                        {includes.map((item, idx) => (
+                            <li className="ml-4 flex items-start gap-2 text-sm md:text-base">
+                                <div className="min-w-8 h-8">
+                                    <CheckCircle2 className="fill-brand text-white md:h-6 md:w-6" />
+                                </div>
+                                <span className={cn()}>{item}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     )
 }
