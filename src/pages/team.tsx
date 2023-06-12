@@ -42,7 +42,7 @@ function InfoCard({ name, intro, imageUrl }: { name: string; intro: string; imag
                 <h1 className="mb-2 text-xl font-semibold text-brand md:text-2xl lg:text-3xl">
                     {name}
                 </h1>
-                <p className="text-sm md:text-base lg:text-lg">{intro}</p>
+                <p className="text-justify text-sm md:text-base lg:text-lg">{intro}</p>
             </div>
         </div>
     )
