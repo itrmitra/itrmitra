@@ -1,6 +1,21 @@
 export const services = [
     {
+        highlight: true,
+        name: "Basic Plan",
+        priceBefore: "699",
+        priceAfter: "0",
+        usefulFor: [
+            "Per Annum Salary less than 5 Lakh",
+            "Single House Property",
+            "Interest Income",
+            "No TDS deductions and refund",
+        ],
+        extraInfo: ["Terms and Conditions Apply", "Offer valid until 30th June, 2023"],
+    },
+    {
         name: "Salary & House Property Plan",
+        priceBefore: "1299",
+        priceAfter: "699",
         usefulFor: [
             "Single & Multiple Employers",
             "Single & Multiple House Property",
@@ -8,23 +23,31 @@ export const services = [
         ],
     },
     {
+        name: "Capital Gain Plan",
+        priceBefore: "3499",
+        priceAfter: "1999",
+        usefulFor: ["Capital Gain Income from Sale of Property, Mutual Funds, Shares, etc."],
+        includes: ["Salary & House Property Plan"],
+    },
+    {
         name: "Business & Professional Plan",
+        priceBefore: "4499",
+        priceAfter: "2999",
         usefulFor: [
             "Business & Professional Income (Non Audit) *",
             "Speculative Income / Intraday Trading of Shares",
             "Agriculture Income",
         ],
-        includes: ["Salary and House Property Plan"],
-        extraInfo:
-            "Plan does not include Account Writing charges, Business Consultancy services and balance sheet Attestation charges",
+        includes: ["Salary and House Property Plan", "Capital Gain Plan"],
+        extraInfo: [
+            "Plan does not include Account Writing, Business Consultancy Services and Balance Sheet Attestation charges",
+        ],
     },
-    {
-        name: "Capital Gain Plan",
-        usefulFor: ["Capital Gain Income from Sale of Property, Mutual Funds, Shares, etc."],
-        includes: ["Salary & House Property Plan", "Business and Professional Plan"],
-    },
+
     {
         name: "Future & Options Plan",
+        priceBefore: "4999",
+        priceAfter: "3999",
         usefulFor: ["F&O Income/Loss (Non Audit)"],
         includes: [
             "Salary & House Property Plan",
@@ -34,6 +57,8 @@ export const services = [
     },
     {
         name: "Crypto Currency Plan",
+        priceBefore: "6499",
+        priceAfter: "4999",
         usefulFor: ["Income from Crypto"],
         includes: [
             "Salary & House Property Plan",
@@ -44,6 +69,8 @@ export const services = [
     },
     {
         name: "NRI/Resident Having Foreign Income",
+        priceBefore: "6999",
+        priceAfter: "4999",
         usefulFor: [
             "NRI income and Foreign Asset Reporting",
             "Indian Income of NRI individual",
