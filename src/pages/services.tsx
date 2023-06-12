@@ -1,7 +1,8 @@
 import { CheckCircle2, IndianRupee } from "lucide-react"
 import { services } from "../data/services"
 import { cn } from "../lib/utils"
-import WhatsappButton from "../components/whatsapp_button"
+import Link from "next/link"
+import { buttonVariants } from "../components/ui/button"
 
 export default function Services() {
     return (
@@ -28,10 +29,17 @@ export default function Services() {
                         <ServiceCard {...item} key={item.name} />
                     ))}
                     <div className="flex flex-col items-center justify-center gap-8 rounded-xl bg-green-500 p-8 text-center text-white shadow-lg">
-                        <h1 className="text-3xl font-bold tracking-tight">
-                            For additional discount and offers contact our team
+                        <h1 className="mb-4 text-3xl font-bold tracking-tight lg:text-4xl">
+                            For additional <br />
+                            discount and offers <br />
+                            contact our team
                         </h1>
-                        <WhatsappButton />
+                        <Link
+                            href="/#form-filing-section"
+                            className={cn(buttonVariants(), "bg-white text-primary")}
+                        >
+                            Connect With Our Team
+                        </Link>
                     </div>
                 </div>
             </div>
