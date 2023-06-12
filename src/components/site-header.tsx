@@ -12,8 +12,6 @@ import { Logo } from "./logo"
 
 export function SiteHeader() {
     const router = useRouter()
-    const tabs = siteConfig.tabs.slice()
-    tabs.push({ title: "Team", href: "/team" })
 
     return (
         <header className="sticky top-0 z-50 border-b bg-gray-100/50 backdrop-blur-lg">
@@ -40,7 +38,7 @@ export function SiteHeader() {
                                 sideOffset={4}
                             >
                                 <>
-                                    {tabs.map((item) => (
+                                    {siteConfig.tabs.map((item) => (
                                         <DropdownMenu.Item
                                             key={item.href}
                                             asChild
