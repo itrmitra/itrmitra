@@ -4,6 +4,7 @@ import FormFilingSection from "../components/info-sections/form-filing-section"
 import ItrBenefitsSection from "../components/info-sections/itr-benefits-section"
 import ItrFilingProcessSection from "../components/info-sections/itr-filiing-process-section"
 import LandingSection from "../components/info-sections/landing-section"
+import OfferSection from "../components/info-sections/offer-section"
 import TestimonialsSection from "../components/info-sections/testimonials-section"
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
                 name="description"
                 content="ITR Mitra helps in filing Income Tax Returns and provides expert assistance with the whole ITR filing process."
             />
+            <OfferSection />
             <LandingSection />
             <FormFilingSection />
             <ItrFilingProcessSection />
