@@ -16,13 +16,6 @@ const sourceOfIncomeOptions = [
     "Interest, Dividend, Lottery Income.",
 ]
 
-const sourceOf = {
-    console: {
-        d: true,
-        f: false,
-    },
-}
-
 interface FormDataType {
     name: string
     email: string
@@ -114,7 +107,10 @@ export default function FormFilingSection() {
         })
     }
     return (
-        <div className="flex flex-col items-center bg-light-brand px-8 py-12 md:min-h-screen md:flex-row md:justify-between">
+        <div
+            id="form-filing-section"
+            className="flex flex-col items-center bg-light-brand px-8 py-12 md:min-h-screen md:flex-row md:justify-between"
+        >
             <div className="flex-1">
                 <img src="/mail.svg" className="h-52 md:mx-auto md:h-auto" alt="Sending Mail" />
             </div>
