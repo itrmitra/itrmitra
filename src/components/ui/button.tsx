@@ -1,11 +1,11 @@
 import { cva } from "class-variance-authority"
 
 const defaultStyles =
-    "h-12 rounded-lg transition-all font-bold flex items-center text-sm md:text-base disabled:bg-gray-400 disabled:text-primary"
+    "h-12 rounded-lg transition-all font-bold flex items-center justify-center text-sm md:text-base disabled:bg-gray-400 disabled:text-primary hover:shadow-md hover:-translate-y-1"
 
 const variantStyles = {
-    filled: "bg-brand text-white hover:bg-brand/90 hover:shadow-md hover:-translate-y-1",
-    outlined: "border-2 border-brand hover:bg-brand hover:text-white",
+    filled: "bg-brand text-white hover:bg-brand/90 ",
+    outlined: "border-2 border-brand text-brand hover:bg-brand hover:text-white",
     link: "hover:border-b-2",
     icon: "aspect-square rounded-full hover:bg-brand hover:text-white outline-none",
 }
