@@ -45,6 +45,7 @@ export default function FormFilingSection() {
         event.preventDefault()
         setError((prev) => "")
         setSuccess((prev) => false)
+        setSourceOfIncomeError((prev) => "")
 
         let nameRegex = /^[a-zA-Z]([-']?[a-zA-Z]+)*( [a-zA-Z]([-']?[a-zA-Z]+)*){1,2}$/
         if (!nameRegex.test(formState.name)) {
@@ -68,6 +69,11 @@ export default function FormFilingSection() {
         let queryRegex = /^[a-zA-Z0-9_\s]*$/
         if (!queryRegex.test(formState.query)) {
             setError((prev) => "Message must contain only letters and numbers")
+            return
+        }
+
+        if (Object.keys(formState.sourceOfIncome).length <= 0) {
+            setSourceOfIncomeError("Atleast one source of income must be selected")
             return
         }
 
@@ -110,21 +116,18 @@ export default function FormFilingSection() {
     return (
         <div
             id="form-filing-section"
-            className="flex flex-col items-center bg-light-brand px-8 py-12 md:min-h-screen md:flex-row md:justify-between"
+            className="flex flex-col items-stretch bg-light-brand px-8 py-12 md:min-h-screen md:flex-row md:justify-between"
         >
             <div className="flex-1">
-                <img src="/mail.svg" className="h-52 md:mx-auto md:h-auto" alt="Sending Mail" />
+                <img src="/mail.svg" className="mx-auto h-52 md:h-auto" alt="Sending Mail" />
             </div>
-            <div className="z-0 mb-8 flex-1 sm:px-0 md:mb-0">
+            <div className="z-0 mb-8  flex-1 sm:px-0 md:mb-0">
                 <h1 className={cn(headingVariants())}>
                     Connect me with <br />
                     ITR Mitra
                 </h1>
-                <form
-                    onSubmit={onSubmit}
-                    className="flex flex-col gap-4 text-sm md:w-3/4 md:text-base"
-                >
-                    <div className="flex flex-col gap-2">
+                <form onSubmit={onSubmit} className="space-y-4 text-sm md:w-3/4 md:text-base">
+                    <div className="flex w-full flex-col items-stretch gap-2">
                         <label htmlFor="fullname" className="font-semibold">
                             Name *
                         </label>
@@ -184,7 +187,7 @@ export default function FormFilingSection() {
                         />
                     </div>
                     {error.length > 0 && (
-                        <p className="flex w-fit items-center gap-2 rounded-md bg-red-600 p-2 text-sm font-bold text-white shadow-sm">
+                        <p className="flex w-fit items-center gap-2 rounded-md bg-red-600 p-2 text-xs font-bold text-white shadow-sm md:text-sm">
                             <Info strokeWidth={2} className="h-6 w-6 text-white" />
                             {error}
                         </p>
@@ -227,9 +230,7 @@ export default function FormFilingSection() {
                                 Source Of Income{" "}
                                 <span className="text-sm font-normal">(Required)</span>
                             </h1>
-                            <p className="mb-4 text-sm font-semibold text-red-600">
-                                {sourceOfIncomeError}
-                            </p>
+
                             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                                 {sourceOfIncomeOptions.map((item) => (
                                     <div className="flex items-start gap-2">
@@ -248,6 +249,12 @@ export default function FormFilingSection() {
                                     </div>
                                 ))}
                             </div>
+                            {sourceOfIncomeError.length > 0 && (
+                                <p className="my-4 flex w-fit items-center gap-2 rounded-md bg-red-600 p-2 text-xs font-bold text-white shadow-sm md:text-sm">
+                                    <Info strokeWidth={2} className="h-6 w-6 text-white" />
+                                    {sourceOfIncomeError}
+                                </p>
+                            )}
                         </div>
                     )}
                     <div className="space-y-4">
