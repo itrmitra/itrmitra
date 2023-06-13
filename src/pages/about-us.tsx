@@ -21,7 +21,7 @@ export default function AboutUs() {
                         <p
                             className={cn(
                                 headingVariants({ variant: "subtext", size: "subtext" }),
-                                "text-justify"
+                                "text-justify md:text-justify"
                             )}
                         >
                             Your Tax Solution Companion! With 8 years of experience in the taxation
