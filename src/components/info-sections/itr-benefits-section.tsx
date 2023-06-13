@@ -12,7 +12,6 @@ export default function ItrBenefitsSection() {
                         <BenefitCard key={item.title} {...item} />
                     ))}
                 </div>
-                p
             </div>
         </div>
     )
