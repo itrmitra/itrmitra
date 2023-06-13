@@ -1,5 +1,7 @@
 import Head from "next/head"
 import { team } from "../data/team"
+import { headingVariants } from "../components/ui/heading"
+import { cn } from "../lib/utils"
 
 export default function Team() {
     return (
@@ -14,10 +16,13 @@ export default function Team() {
                 />
             </Head>
             <div className="px-8 py-12 text-center md:min-h-screen md:text-left">
-                <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-                    Meet Our Team
-                </h1>
-                <p className="mb-12 text-sm md:w-1/2 md:text-base lg:text-lg">
+                <h1 className={cn(headingVariants(), "mb-4")}>Meet Our Team</h1>
+                <p
+                    className={cn(
+                        headingVariants({ variant: "subtext", size: "subtext" }),
+                        "mb-12"
+                    )}
+                >
                     Our team's creativity, innovation, and drive have helped us to transform
                     individual ideas into a functional and successful organization.
                 </p>
