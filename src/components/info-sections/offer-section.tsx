@@ -52,7 +52,7 @@ function ServiceCard({
         >
             <div className="flex flex-1 flex-col justify-center text-left lg:items-center lg:text-center">
                 <p className="mb-1 text-sm lg:text-base">Annual Pricing</p>
-                <div className="mb-2 flex items-center gap-4">
+                <div className="-ml-1 mb-2 flex items-center gap-4">
                     <div className={cn("flex items-center text-brand", highlight && "text-white")}>
                         <IndianRupee size={30} className="block h-8 lg:h-20" strokeWidth={3} />
                         <span className="text-4xl font-extrabold lg:text-6xl">{priceAfter}</span>
