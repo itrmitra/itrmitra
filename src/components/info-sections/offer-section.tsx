@@ -6,7 +6,7 @@ import { buttonVariants } from "../ui/button"
 
 export default function OfferSection() {
     return (
-        <div className="flex flex-col items-stretch border-b px-8 py-12 md:min-h-screen md:flex-row md:items-center md:py-0">
+        <div className="flex flex-col items-stretch border-b px-8 py-12 md:min-h-screen md:flex-row md:items-center">
             <div className="mb-8 flex-1">
                 <img
                     src="/discount-announcement.svg"
