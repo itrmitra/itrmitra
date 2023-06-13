@@ -1,5 +1,6 @@
 import { cn } from "../../lib/utils"
 import { buttonVariants } from "../ui/button"
+import { headingVariants } from "../ui/heading"
 import WhatsappButton from "../whatsapp_button"
 
 export default function NoticeSection() {
@@ -7,14 +8,15 @@ export default function NoticeSection() {
         <div className="flex flex-col-reverse items-center py-12 md:min-h-screen md:flex-row md:py-0">
             <div className="flex-1">
                 <div className="mx-auto flex w-3/4 flex-col items-center text-center md:items-start md:text-start">
-                    <h1 className="mb-8 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-start md:text-5xl lg:text-6xl">
+                    <h1 className={cn(headingVariants())}>
                         Notice Received from the Income Tax Department?
-                        <br className="mb-4" />
-                        <span className="text-brand">We're Here to Assist You!</span>
+                    </h1>
+                    <h1 className={cn(headingVariants(), "text-brand")}>
+                        We're Here to Assist You!
                     </h1>
                     <div className="flex flex-col items-center gap-4 md:flex-row">
                         <a
-                            className={cn(buttonVariants(), "gap-2 bg-white text-primary")}
+                            className={cn(buttonVariants(), "text-primary gap-2 bg-white")}
                             href={`https://mail.google.com/mail/?view=cm&fs=1&to=${process.env.NEXT_PUBLIC_EMAIL}&su=NOTICE+ITR+MITRA`}
                         >
                             Share Notice

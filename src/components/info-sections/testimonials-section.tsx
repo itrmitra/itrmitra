@@ -1,14 +1,13 @@
 import { Star } from "lucide-react"
 import { cn } from "../../lib/utils"
 import { testimonials } from "../../data/testimonials"
+import { headingVariants } from "../ui/heading"
 
 export default function TestimonialsSection() {
     return (
-        <div className="flex flex-col border-b bg-light-brand px-8 py-12 md:min-h-screen md:px-12">
-            <h1 className="mx-auto mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-                Testimonials
-            </h1>
-            <p className="mx-auto mb-12 text-center text-xl font-light tracking-tight md:text-2xl lg:text-3xl">
+        <div className="flex flex-col items-center bg-light-brand px-8 py-12 md:min-h-screen">
+            <h1 className={cn(headingVariants(), "mb-4")}>Testimonials</h1>
+            <p className={cn(headingVariants({ variant: "subheading", size: "normal" }))}>
                 We have worked with hundreds of amazing people
             </p>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

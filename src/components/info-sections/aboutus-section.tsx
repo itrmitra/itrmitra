@@ -2,6 +2,7 @@ import Link from "next/link"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import { buttonVariants } from "../ui/button"
 import { cn } from "../../lib/utils"
+import { headingVariants } from "../ui/heading"
 
 export default function AboutUsSection() {
     return (
@@ -12,7 +13,7 @@ export default function AboutUsSection() {
             <div className="flex-1">
                 <div className="mx-auto flex w-3/4 flex-col items-center md:items-start">
                     <h2 className="mb-4 text-center text-sm md:text-start lg:text-lg">ABOUT US</h2>
-                    <h1 className="mb-6 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-start md:text-5xl lg:text-6xl">
+                    <h1 className={cn(headingVariants())}>
                         We are here to make your tax filing process easier!
                     </h1>
                     <ul className="mb-8 space-y-4 text-sm md:text-base lg:text-lg">

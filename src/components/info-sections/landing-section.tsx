@@ -1,3 +1,5 @@
+import { cn } from "../../lib/utils"
+import { headingVariants } from "../ui/heading"
 import WhatsappButton from "../whatsapp_button"
 
 export default function LandingSection() {
@@ -5,10 +7,10 @@ export default function LandingSection() {
         <div className="flex flex-col-reverse items-center px-8 py-12 md:min-h-screen md:flex-row">
             <div className="flex-1">
                 <div className="mx-auto flex w-3/4 flex-col items-center text-center md:items-start md:text-start">
-                    <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
+                    <h1 className={headingVariants({})}>
                         Simplify Your Tax Filing Experience with Expert Guidance
                     </h1>
-                    <p className="mb-8 text-sm md:text-base lg:text-lg">
+                    <p className={cn(headingVariants({ variant: "subtext", size: "subtext" }))}>
                         Maximize Returns, Minimize Stress: Your Trusted Tax Filing Partner
                     </p>
                     <WhatsappButton />

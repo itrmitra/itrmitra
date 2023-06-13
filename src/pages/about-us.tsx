@@ -1,5 +1,7 @@
 import Head from "next/head"
 import { aboutus } from "../data/aboutus"
+import { cn } from "../lib/utils"
+import { headingVariants } from "../components/ui/heading"
 
 export default function AboutUs() {
     return (
@@ -15,10 +17,13 @@ export default function AboutUs() {
             <div className="flex flex-col-reverse items-center py-12 md:min-h-screen md:flex-row md:py-0">
                 <div className="flex-1">
                     <div className="mx-auto flex w-3/4 flex-col items-center text-center md:items-start md:text-start">
-                        <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-                            Welcome to ITR Mitra
-                        </h1>
-                        <p className="text-justify text-sm md:text-base lg:text-lg">
+                        <h1 className={cn(headingVariants(), "mb-4")}>Welcome to ITR Mitra</h1>
+                        <p
+                            className={cn(
+                                headingVariants({ variant: "subtext", size: "subtext" }),
+                                "text-justify"
+                            )}
+                        >
                             Your Tax Solution Companion! With 8 years of experience in the taxation
                             realm, we're thrilled to launch our online portal, bringing our
                             expertise to your fingertips. Backed by a team of competent tax
@@ -31,10 +36,8 @@ export default function AboutUs() {
                     <img src="/about-us.svg" className="h-52 md:h-auto" alt="About Us" />
                 </div>
             </div>
-            <div className="flex flex-col bg-light-brand px-8 py-12 md:px-12">
-                <h1 className=" mx-auto mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-                    Why choose ITR Mitra?
-                </h1>
+            <div className="flex flex-col items-center bg-light-brand px-8 py-12 md:px-12">
+                <h1 className={cn(headingVariants())}>Why choose ITR Mitra?</h1>
                 <div className="mt-8 flex flex-col gap-6 md:flex-row">
                     {aboutus.slice(0, -2).map((item) => (
                         <FeatureCard key={item.title} {...item} />
@@ -49,7 +52,12 @@ export default function AboutUs() {
             </div>
             <div className="bg-brand">
                 <div className="mx-auto px-8 py-12 md:w-1/2">
-                    <h1 className="text-center text-lg font-semibold text-white md:text-3xl">
+                    <h1
+                        className={cn(
+                            headingVariants({ variant: "subheading", size: "normal" }),
+                            "mb-0 font-semibold text-white md:text-center"
+                        )}
+                    >
                         Join ITR Mitra today and experience a new era of effortless tax preparation.
                         Together, we'll conquer your tax challenges and embrace financial success.
                     </h1>

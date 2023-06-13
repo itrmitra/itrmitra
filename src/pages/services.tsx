@@ -4,6 +4,7 @@ import { cn } from "../lib/utils"
 import Link from "next/link"
 import { buttonVariants } from "../components/ui/button"
 import Head from "next/head"
+import { headingVariants } from "../components/ui/heading"
 
 export default function Services() {
     return (
@@ -18,10 +19,13 @@ export default function Services() {
             </Head>
             <div className="px-8 py-12 text-center md:min-h-screen md:text-left">
                 <div>
-                    <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-                        Services
-                    </h1>
-                    <p className="mb-12 text-sm md:w-1/2 md:text-base lg:text-lg">
+                    <h1 className={cn(headingVariants(), "mb-4")}>Services</h1>
+                    <p
+                        className={cn(
+                            headingVariants({ variant: "subtext", size: "subtext" }),
+                            "mb-12 lg:w-1/2"
+                        )}
+                    >
                         Our team of experts is here to help to save time, money and hassle. Our six
                         services offer a comprehensive solution for your needs.
                     </p>
@@ -39,7 +43,7 @@ export default function Services() {
                         </h1>
                         <Link
                             href="/#form-filing-section"
-                            className={cn(buttonVariants(), "bg-white text-primary")}
+                            className={cn(buttonVariants(), "bg-white text-dark-gray")}
                         >
                             Connect With Our Team
                         </Link>

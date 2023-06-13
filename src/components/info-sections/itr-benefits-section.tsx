@@ -1,17 +1,18 @@
 import { benefits } from "../../data/benefits"
+import { cn } from "../../lib/utils"
+import { headingVariants } from "../ui/heading"
 
 export default function ItrBenefitsSection() {
     return (
-        <div className="flex flex-col px-8 py-12">
-            <h1 className="mx-auto mb-12 text-center text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-                Benefits of Filing ITR
-            </h1>
+        <div className="flex flex-col items-center px-8 py-12">
+            <h1 className={cn(headingVariants(), "mb-12")}>Benefits of Filing ITR</h1>
             <div className="mx-auto w-full lg:w-3/4">
                 <div className="grid gap-6 md:grid-cols-3">
                     {benefits.map((item) => (
                         <BenefitCard key={item.title} {...item} />
                     ))}
                 </div>
+                p
             </div>
         </div>
     )

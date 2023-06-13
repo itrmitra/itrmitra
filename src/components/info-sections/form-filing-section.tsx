@@ -4,6 +4,7 @@ import { sendEmail } from "../../lib/sendEmail"
 import { cn } from "../../lib/utils"
 import { inputVariants } from "../ui/input"
 import { Info } from "lucide-react"
+import { headingVariants } from "../ui/heading"
 
 const sourceOfIncomeOptions = [
     "Salary/ Pension",
@@ -115,8 +116,9 @@ export default function FormFilingSection() {
                 <img src="/mail.svg" className="h-52 md:mx-auto md:h-auto" alt="Sending Mail" />
             </div>
             <div className="z-0 mb-8 flex-1 sm:px-0 md:mb-0">
-                <h1 className="mb-4 text-center text-4xl font-extrabold tracking-tighter md:text-left md:text-5xl">
-                    Connect me with <span className="inline-block">ITR Mitra</span>
+                <h1 className={cn(headingVariants())}>
+                    Connect me with <br />
+                    ITR Mitra
                 </h1>
                 <form
                     onSubmit={onSubmit}
