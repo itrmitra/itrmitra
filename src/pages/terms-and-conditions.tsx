@@ -13,9 +13,9 @@ export default function Pricing() {
             </Head>
             <div className="px-8 py-12 md:min-h-screen">
                 <h1 className="mb-12 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-                    Terms and Conditions of ITR Mitra
+                    Terms and Conditions
                 </h1>
-                <div className="rounded-xl border bg-white p-8">
+                <div className="rounded-xl border bg-white p-8 text-sm md:text-base lg:text-lg">
                     <p className="mb-4">
                         These Terms and Conditions (&quot;Agreement&quot;) govern your use of the
                         website and services provided by ITR Mitra (&quot;Company,&quot;

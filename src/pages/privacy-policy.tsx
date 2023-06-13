@@ -15,7 +15,7 @@ export default function Pricing() {
                 <h1 className="mb-12 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                     Privacy Policy of ITR Mitra
                 </h1>
-                <p className="rounded-xl border bg-white p-8">
+                <p className="rounded-xl border bg-white p-8 text-sm md:text-base lg:text-lg">
                     <p className="mb-4">
                         At ITR Mitra, we are committed to protecting the privacy and security of our
                         users: personal information. This Privacy Policy outlines how we collect,
