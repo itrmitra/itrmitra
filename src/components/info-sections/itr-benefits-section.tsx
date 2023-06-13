@@ -6,8 +6,8 @@ export default function ItrBenefitsSection() {
     return (
         <div className="flex flex-col items-center px-8 py-12">
             <h1 className={cn(headingVariants(), "mb-12")}>Benefits of Filing ITR</h1>
-            <div className="mx-auto w-full lg:w-3/4">
-                <div className="grid gap-6 md:grid-cols-3">
+            <div className="mx-auto w-full">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {benefits.map((item) => (
                         <BenefitCard key={item.title} {...item} />
                     ))}
