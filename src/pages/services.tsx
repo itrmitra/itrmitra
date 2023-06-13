@@ -77,7 +77,9 @@ function ServiceCard({
         >
             <p className="text-sm">Annual Pricing</p>
             <div className="mb-2 flex items-center gap-4">
-                <div className={cn("flex items-center text-brand", highlight && "text-white")}>
+                <div
+                    className={cn("-ml-1 flex items-center text-brand", highlight && "text-white")}
+                >
                     <IndianRupee size={30} className="h-8 md:h-12" strokeWidth={3} />
                     <span className="text-4xl font-extrabold">{priceAfter}</span>
                 </div>
