@@ -1,15 +1,18 @@
+import Head from "next/head"
 import { team } from "../data/team"
 
 export default function Team() {
     return (
         <>
-            <title>ITR Mitra | Team</title>
-            <meta
-                title="ITR Mitra | Team"
-                name="description"
-                content="Our team's creativity, innovation, and drive have helped us to transform
+            <Head>
+                <title>ITR Mitra | Team</title>
+                <meta
+                    title="ITR Mitra | Team"
+                    name="description"
+                    content="Our team's creativity, innovation, and drive have helped us to transform
                     individual ideas into a functional and successful organization."
-            />
+                />
+            </Head>
             <div className="px-8 py-12 text-center md:min-h-screen md:text-left">
                 <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                     Meet Our Team

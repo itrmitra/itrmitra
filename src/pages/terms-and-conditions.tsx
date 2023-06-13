@@ -1,12 +1,16 @@
+import Head from "next/head"
+
 export default function Pricing() {
     return (
         <>
-            <title>ITR Mitra | Terms and Conditions</title>
-            <meta
-                title="ITR Mitra | Terms and Conditions"
-                name="description"
-                content="ITR Mitra Terms and Conditions"
-            />
+            <Head>
+                <title>ITR Mitra | Terms and Conditions</title>
+                <meta
+                    title="ITR Mitra | Terms and Conditions"
+                    name="description"
+                    content="ITR Mitra Terms and Conditions"
+                />
+            </Head>
             <div className="px-8 py-12 md:min-h-screen">
                 <h1 className="mb-12 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                     Terms and Conditions of ITR Mitra

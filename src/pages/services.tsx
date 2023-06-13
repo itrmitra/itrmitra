@@ -3,16 +3,19 @@ import { services } from "../data/services"
 import { cn } from "../lib/utils"
 import Link from "next/link"
 import { buttonVariants } from "../components/ui/button"
+import Head from "next/head"
 
 export default function Services() {
     return (
         <>
-            <title>ITR Mitra | Services</title>
-            <meta
-                title="ITR Mitra | Services"
-                name="description"
-                content="ITR Mitra provides six types of services including Capital Gain Plan, Future & Options Plan and NRI having Foreign Income."
-            />
+            <Head>
+                <title>ITR Mitra | Services</title>
+                <meta
+                    title="ITR Mitra | Services"
+                    name="description"
+                    content="ITR Mitra provides six types of services including Capital Gain Plan, Future & Options Plan and NRI having Foreign Income."
+                />
+            </Head>
             <div className="px-8 py-12 text-center md:min-h-screen md:text-left">
                 <div>
                     <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">

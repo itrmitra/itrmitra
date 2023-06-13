@@ -1,3 +1,4 @@
+import Head from "next/head"
 import AboutUsSection from "../components/info-sections/aboutus-section"
 import FaqSection from "../components/info-sections/faq-section"
 import FormFilingSection from "../components/info-sections/form-filing-section"
@@ -10,12 +11,14 @@ import TestimonialsSection from "../components/info-sections/testimonials-sectio
 export default function Home() {
     return (
         <>
-            <title>ITR Mitra | Home</title>
-            <meta
-                title="ITR Mitra | Your Personal Tax Filing Expert"
-                name="description"
-                content="ITR Mitra helps in filing Income Tax Returns and provides expert assistance with the whole ITR filing process."
-            />
+            <Head>
+                <title>ITR Mitra | Home</title>
+                <meta
+                    title="ITR Mitra | Your Personal Tax Filing Expert"
+                    name="description"
+                    content="ITR Mitra helps in filing Income Tax Returns and provides expert assistance with the whole ITR filing process."
+                />
+            </Head>
             <OfferSection />
             <LandingSection />
             <FormFilingSection />
