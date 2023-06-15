@@ -5,18 +5,13 @@ import Link from "next/link"
 import { buttonVariants } from "../components/ui/button"
 import Head from "next/head"
 import { headingVariants } from "../components/ui/heading"
+import CustomHead from "../components/custom-head"
+import { siteConfig } from "../data/siteconfig"
 
 export default function Services() {
     return (
         <>
-            <Head>
-                <title>ITR Mitra | Services</title>
-                <meta
-                    title="ITR Mitra | Services"
-                    name="description"
-                    content="ITR Mitra provides six types of services including Capital Gain Plan, Future & Options Plan and NRI having Foreign Income."
-                />
-            </Head>
+            <CustomHead {...siteConfig.pageInfo.services} />
             <div className="px-8 py-12 text-center md:min-h-screen md:text-left">
                 <div>
                     <h1 className={cn(headingVariants(), "mb-4")}>Services</h1>

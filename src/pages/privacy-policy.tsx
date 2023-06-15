@@ -1,16 +1,11 @@
 import Head from "next/head"
+import CustomHead from "../components/custom-head"
+import { siteConfig } from "../data/siteconfig"
 
 export default function Pricing() {
     return (
         <>
-            <Head>
-                <title>ITR Mitra | Privacy Policy</title>
-                <meta
-                    title="ITR Mitra | Privacy Policy"
-                    name="description"
-                    content="ITR Mitra Privacy Policy"
-                />
-            </Head>
+            <CustomHead {...siteConfig.pageInfo.privacyPolicy} />
             <div className="px-8 py-12 md:min-h-screen">
                 <h1 className="mb-12 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                     Privacy Policy of ITR Mitra
