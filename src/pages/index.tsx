@@ -40,7 +40,12 @@ export default function Home() {
                     name="description"
                     content="ITR Mitra helps in filing Income Tax Returns and provides expert assistance with the whole ITR filing process. We also help custombers with Income Tax Notices and further procedures."
                 />
-
+                
+                <meta
+                    title="ITR Filing | Your Personal Tax Filing Expert"
+                    name="description"
+                    content="ITR Mitra helps in filing Income Tax Returns and provides expert assistance with the whole ITR filing process. We also help custombers with Income Tax Notices and further procedures."
+                />
                 <Script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{

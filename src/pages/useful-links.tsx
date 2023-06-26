@@ -30,6 +30,7 @@ export default function UsefulLinks() {
                             <a
                                 href={item.href}
                                 className="inline-block w-full cursor-pointer rounded-xl border bg-white p-8 text-center  transition-all hover:bg-brand hover:text-white hover:underline hover:shadow-lg  lg:text-lg"
+                                target="_blank"
                             >
                                 {item.title}
                             </a>
