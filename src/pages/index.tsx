@@ -1,4 +1,3 @@
-import Head from "next/head"
 import AboutUsSection from "../components/info-sections/aboutus-section"
 import FaqSection from "../components/info-sections/faq-section"
 import FormFilingSection from "../components/info-sections/form-filing-section"
@@ -7,32 +6,13 @@ import ItrFilingProcessSection from "../components/info-sections/itr-filiing-pro
 import LandingSection from "../components/info-sections/landing-section"
 import OfferSection from "../components/info-sections/offer-section"
 import TestimonialsSection from "../components/info-sections/testimonials-section"
-import Script from "next/script"
-
-const content = {
-    "@context": "https://schema.org",
-    "@type": "FinancialService",
-    name: "ITR Mitra",
-    alternateName: "ITR Mitra",
-    url: "https://itrmitra.in/",
-    telephone: "+91-9359412287",
-    address: {
-        "@type": "PostalAddress",
-        streetAddress: "Office No. 5, Building No.2, New Laxmi Narayan Park, Koregaon Park",
-        addressLocality: "Pune",
-        postalCode: "411001",
-        addressCountry: "IN",
-    },
-    contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+91-9359412287",
-        contactType: "customer service",
-    },
-}
+import CustomHead from "../components/custom-head"
+import { siteConfig } from "../data/siteconfig"
 
 export default function Home() {
     return (
         <>
+
             <Head>
                 <title>ITR Mitra | Home</title>
                 <meta
@@ -53,6 +33,9 @@ export default function Home() {
                     }}
                 />
             </Head>
+
+            <CustomHead {...siteConfig.pageInfo.home} />
+
             <OfferSection />
             <LandingSection />
             <FormFilingSection />

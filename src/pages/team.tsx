@@ -2,19 +2,13 @@ import Head from "next/head"
 import { team } from "../data/team"
 import { headingVariants } from "../components/ui/heading"
 import { cn } from "../lib/utils"
+import CustomHead from "../components/custom-head"
+import { siteConfig } from "../data/siteconfig"
 
 export default function Team() {
     return (
         <>
-            <Head>
-                <title>ITR Mitra | Team</title>
-                <meta
-                    title="ITR Mitra | Team"
-                    name="description"
-                    content="Our team's creativity, innovation, and drive have helped us to transform
-                    individual ideas into a functional and successful organization."
-                />
-            </Head>
+            <CustomHead {...siteConfig.pageInfo.team} />
             <div className="px-8 py-12 text-center md:min-h-screen md:text-left">
                 <h1 className={cn(headingVariants(), "mb-4")}>Meet Our Team</h1>
                 <p

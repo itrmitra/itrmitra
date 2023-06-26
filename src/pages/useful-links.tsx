@@ -2,17 +2,13 @@ import Head from "next/head"
 import { usefulLinks } from "../data/useful-links"
 import { headingVariants } from "../components/ui/heading"
 import { cn } from "../lib/utils"
+import CustomHead from "../components/custom-head"
+import { siteConfig } from "../data/siteconfig"
 
 export default function UsefulLinks() {
     return (
         <>
-            <Head>
-                <title>ITR Mitra | Useful Links</title>
-                <meta
-                    name="description"
-                    content="ITR Mitra helps in filing Income Tax Returns and provides expert assistance with the whole ITR filing process. We also help custombers with Income Tax Notices and further procedures."
-                />
-            </Head>
+            <CustomHead {...siteConfig.pageInfo.usefulLinks} />
             <div className="flex flex-col items-stretch justify-center px-8 py-12 md:min-h-screen">
                 <h1 className={cn(headingVariants(), "mx-auto mb-4")}>Useful Links</h1>
                 <p

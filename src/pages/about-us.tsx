@@ -1,19 +1,13 @@
-import Head from "next/head"
 import { aboutus } from "../data/aboutus"
 import { cn } from "../lib/utils"
 import { headingVariants } from "../components/ui/heading"
+import CustomHead from "../components/custom-head"
+import { siteConfig } from "../data/siteconfig"
 
 export default function AboutUs() {
     return (
         <>
-            <Head>
-                <title>ITR Mitra | About Us</title>
-                <meta
-                    title="ITR Mitra | About Us"
-                    name="description"
-                    content="ITR Mitra is group of Tax Experts having industry experience. We care about your privacy and confidentiality of your data."
-                />
-            </Head>
+            <CustomHead {...siteConfig.pageInfo.aboutus} />
             <div className="flex flex-col-reverse items-center py-12 md:min-h-screen md:flex-row md:py-0">
                 <div className="flex-1">
                     <div className="mx-auto flex w-3/4 flex-col items-center text-center md:items-start md:text-start">

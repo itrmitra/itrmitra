@@ -3,20 +3,14 @@ import { services } from "../data/services"
 import { cn } from "../lib/utils"
 import Link from "next/link"
 import { buttonVariants } from "../components/ui/button"
-import Head from "next/head"
 import { headingVariants } from "../components/ui/heading"
+import CustomHead from "../components/custom-head"
+import { siteConfig } from "../data/siteconfig"
 
 export default function Services() {
     return (
         <>
-            <Head>
-                <title>ITR Mitra | Services</title>
-                <meta
-                    title="ITR Mitra | Services"
-                    name="description"
-                    content="ITR Mitra provides six types of services including Capital Gain Plan, Future & Options Plan and NRI having Foreign Income."
-                />
-            </Head>
+            <CustomHead {...siteConfig.pageInfo.services} />
             <div className="px-8 py-12 text-center md:min-h-screen md:text-left">
                 <div>
                     <h1 className={cn(headingVariants(), "mb-4")}>Services</h1>
@@ -93,7 +87,7 @@ function ServiceCard({
                 <p className="mb-4 text-sm font-medium md:text-base">Useful For:</p>
                 <ul>
                     {usefulFor.map((item, idx) => (
-                        <li className="ml-4 flex items-start gap-2 text-sm md:text-base">
+                        <li className="ml-4 flex items-start gap-2 text-sm md:text-base" key={item}>
                             <div className="min-w-8 h-8">
                                 <CheckCircle2
                                     className={cn(
@@ -112,7 +106,10 @@ function ServiceCard({
                     <p className="mb-4 text-sm font-medium md:text-base">Includes:</p>
                     <ul>
                         {includes.map((item, idx) => (
-                            <li className="ml-4 flex items-start gap-2 text-sm md:text-base">
+                            <li
+                                className="ml-4 flex items-start gap-2 text-sm md:text-base"
+                                key={item}
+                            >
                                 <div className="min-w-8 h-8">
                                     <CheckCircle2 className="fill-brand text-white md:h-6 md:w-6" />
                                 </div>
@@ -125,7 +122,9 @@ function ServiceCard({
             {extraInfo && (
                 <ul className="mt-4 space-y-2">
                     {extraInfo.map((item) => (
-                        <li className={cn("text-sm", highlight && "text-white")}>* {item}</li>
+                        <li className={cn("text-sm", highlight && "text-white")} key={item}>
+                            * {item}
+                        </li>
                     ))}
                 </ul>
             )}
