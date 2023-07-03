@@ -42,7 +42,7 @@ export const siteConfig = {
         home: {
             title: "ITR Mitra | Your Personal Tax Filing Expert",
             description:
-                "ITR Mitra helps in filing Income Tax Returns and provides expert assistance with the whole ITR filing process. We also help custombers with Income Tax Notices and further procedures.",
+                "ITR Mitra helps in filing Income Tax Returns and provides expert assistance with the whole ITR filing process. We also help customers with Income Tax Notices and further procedures.",
             structuredData,
         },
         aboutus: {
