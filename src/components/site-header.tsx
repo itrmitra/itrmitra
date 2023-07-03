@@ -5,10 +5,11 @@ import { buttonVariants } from "./ui/button"
 
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 
-import { Menu } from "lucide-react"
+import { Mail, Menu } from "lucide-react"
 import WhatsappButton from "./whatsapp_button"
 import { siteConfig } from "../data/siteconfig"
 import { Logo } from "./logo"
+import { cn } from "../lib/utils"
 
 export function SiteHeader() {
     const router = useRouter()
@@ -20,8 +21,41 @@ export function SiteHeader() {
             <div className="flex h-20 items-center justify-between px-8 lg:container sm:px-16 lg:px-0">
                 <Logo />
                 <MainNav currentHref={router.pathname} />
-                <div className="hidden md:block">
-                    <WhatsappButton />
+                <div className="flex gap-2 md:hidden">
+                    <a
+                        href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`}
+                        role="button"
+                        aria-label="Connect on Whatsapp button"
+                        target="_blank"
+                        className={cn(
+                            buttonVariants({ variant: "filled" }),
+                            "text-primary z-0 h-12 w-12 gap-2 bg-white p-2"
+                        )}
+                    >
+                        <img src="/whatsapp.svg" className="h-7 w-7" alt="Whatsapp Logo" />
+                    </a>
+                    <Link
+                        href="/#form-filing-section"
+                        className={cn(
+                            buttonVariants({ variant: "filled" }),
+                            "z-0 h-12 w-12 gap-2 p-2"
+                        )}
+                    >
+                        <Mail className="fill-white stroke-brand" />
+                    </Link>
+                </div>
+                <div className="flex items-center gap-4">
+                    <div className="hidden md:block">
+                        <WhatsappButton />
+                    </div>
+                    <div className="hidden lg:block">
+                        <Link
+                            href="/#form-filing-section"
+                            className={cn(buttonVariants(), "gap-2")}
+                        >
+                            Email Enquiry <Mail className="fill-white stroke-brand" />
+                        </Link>
+                    </div>
                 </div>
                 <div className="md:hidden">
                     <DropdownMenu.Root>
