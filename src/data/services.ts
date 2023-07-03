@@ -1,18 +1,6 @@
 export const services = [
     {
         highlight: true,
-        name: "Basic Plan",
-        priceBefore: "699",
-        priceAfter: "0",
-        usefulFor: [
-            "Per Annum Salary less than 5 Lakh",
-            "Single House Property",
-            "Interest Income",
-            "No TDS deductions and refund",
-        ],
-        extraInfo: ["Terms and Conditions Apply", "Offer valid until 30th June, 2023"],
-    },
-    {
         name: "Salary & House Property Plan",
         priceBefore: "1299",
         priceAfter: "699",
@@ -21,6 +9,7 @@ export const services = [
             "Single & Multiple House Property",
             "Income from Other Sources",
         ],
+        extraInfo: ["Terms and Conditions Apply", "Offer valid until 10th July, 2023"],
     },
     {
         name: "Capital Gain Plan",
@@ -83,5 +72,18 @@ export const services = [
             "Future & Options Plan",
             "Crypto Currency Plan",
         ],
+    },
+    {
+        expired: true,
+        name: "Basic Plan",
+        priceBefore: "699",
+        priceAfter: "0",
+        usefulFor: [
+            "Per Annum Salary less than 5 Lakh",
+            "Single House Property",
+            "Interest Income",
+            "No TDS deductions and refund",
+        ],
+        extraInfo: ["Terms and Conditions Apply", "Offer valid until 30th June, 2023"],
     },
 ]
