@@ -56,7 +56,9 @@ function ServiceCard({
     priceAfter,
     extraInfo,
     highlight,
+    expired,
 }: {
+    expired?: boolean
     highlight?: boolean
     name: string
     priceBefore: string
@@ -69,6 +71,11 @@ function ServiceCard({
         <div
             className={cn("rounded-xl bg-white p-8 shadow-lg", highlight && "bg-brand text-white")}
         >
+            {expired && (
+                <div className="mb-4 rounded-md bg-red-500/20 p-2 text-center font-bold text-red-500">
+                    Plan is expired
+                </div>
+            )}
             <p className="text-sm">Annual Pricing</p>
             <div className="mb-2 flex items-center gap-4">
                 <div
