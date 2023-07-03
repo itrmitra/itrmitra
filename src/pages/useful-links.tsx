@@ -1,4 +1,3 @@
-import Head from "next/head"
 import { usefulLinks } from "../data/useful-links"
 import { headingVariants } from "../components/ui/heading"
 import { cn } from "../lib/utils"
