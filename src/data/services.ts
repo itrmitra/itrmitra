@@ -2,7 +2,7 @@ export const services = [
     {
         highlight: true,
         name: "Salary & House Property Plan",
-        priceBefore: "1299",
+        priceBefore: "1399",
         priceAfter: "699",
         usefulFor: [
             "Single & Multiple Employers",
