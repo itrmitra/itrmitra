@@ -1,4 +1,5 @@
-import { Html, Head, Main, NextScript } from "next/document"
+import { Head, Html, Main, NextScript } from "next/document"
+import FloatingContactButtons from "../components/FloatingContactButtons"
 
 export default function Document() {
     return (
@@ -7,6 +8,7 @@ export default function Document() {
             <body className="min-h-screen bg-gray-100 text-dark-gray">
                 <Main />
                 <NextScript />
+                <FloatingContactButtons />
             </body>
         </Html>
     )
