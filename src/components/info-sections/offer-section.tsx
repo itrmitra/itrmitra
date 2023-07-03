@@ -19,8 +19,8 @@ export default function OfferSection() {
                     <span className="text-brand">LAUNCHING</span> OFFER
                 </h1>
                 <h1 className="mb-8 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-                    <span className="text-brand">100% DISCOUNT</span> <br />
-                    <span>ON OUR BASIC PLAN</span>
+                    <span className="text-brand">50% DISCOUNT</span> <br />
+                    <span>ON SALARY AND HP PLAN</span>
                 </h1>
                 <ServiceCard {...services[0]} />
             </div>
@@ -62,7 +62,7 @@ function ServiceCard({
                         <span className="text-3xl line-through">{priceBefore}</span>
                     </div>
                 </div>
-                <h1 className="mb-4 text-3xl font-bold lg:text-5xl">{name}</h1>
+                <h1 className="mb-4 text-3xl font-bold lg:w-3/4 lg:text-3xl">{name}</h1>
             </div>
             <div className="mb-4 text-left">
                 <p className="mb-4 text-sm font-medium md:text-base">Useful For:</p>
