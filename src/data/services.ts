@@ -2,14 +2,14 @@ export const services = [
     {
         highlight: true,
         name: "Salary & House Property Plan",
-        priceBefore: "1399",
-        priceAfter: "699",
+        priceBefore: "1999",
+        priceAfter: "999",
         usefulFor: [
             "Single & Multiple Employers",
             "Single & Multiple House Property",
             "Income from Other Sources",
         ],
-        extraInfo: ["Terms and Conditions Apply", "Offer valid until 10th July, 2023"],
+        extraInfo: ["Terms and Conditions Apply", "Offer valid until 31st July, 2023"],
     },
     {
         name: "Capital Gain Plan",
