@@ -16,7 +16,7 @@ export default function OfferSection() {
             </div>
             <div className="mb-8 flex flex-1 flex-col justify-center text-center md:mb-0">
                 <h1 className="mb-4 animate-bounce text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl lg:text-5xl">
-                    <span className="text-brand">LAUNCHING</span> OFFER
+                    <span className="text-brand">Tax-filing</span> Mahotsav Offer
                 </h1>
                 <h1 className="mb-8 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                     <span className="text-brand">50% DISCOUNT</span> <br />
