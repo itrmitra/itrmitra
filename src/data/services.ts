@@ -2,8 +2,8 @@ export const services = [
     {
         highlight: true,
         name: "Salary & House Property Plan",
-        priceBefore: "1999",
-        priceAfter: "999",
+        priceBefore: "1599",
+        priceAfter: "799",
         usefulFor: [
             "Single & Multiple Employers",
             "Single & Multiple House Property",
@@ -13,8 +13,8 @@ export const services = [
     },
     {
         name: "Capital Gain Plan",
-        priceBefore: "3499",
-        priceAfter: "1999",
+        priceBefore: "2999",
+        priceAfter: "1499",
         usefulFor: ["Capital Gain Income from Sale of Property, Mutual Funds, Shares, etc."],
         includes: ["Salary & House Property Plan"],
     },
@@ -36,7 +36,7 @@ export const services = [
     {
         name: "Future & Options Plan",
         priceBefore: "4999",
-        priceAfter: "3499",
+        priceAfter: "2999",
         usefulFor: ["F&O Income/Loss (Non Audit)"],
         includes: [
             "Salary & House Property Plan",
@@ -47,7 +47,7 @@ export const services = [
     {
         name: "Crypto Currency Plan",
         priceBefore: "6499",
-        priceAfter: "4499",
+        priceAfter: "3999",
         usefulFor: ["Income from Crypto"],
         includes: [
             "Salary & House Property Plan",
