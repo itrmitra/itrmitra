@@ -2,8 +2,8 @@ export const services = [
     {
         highlight: true,
         name: "Salary & House Property Plan",
-        priceBefore: "1599",
-        priceAfter: "799",
+        priceBefore: "1999",
+        priceAfter: "999",
         usefulFor: [
             "Single & Multiple Employers",
             "Single & Multiple House Property",
@@ -13,8 +13,8 @@ export const services = [
     },
     {
         name: "Capital Gain Plan",
-        priceBefore: "2999",
-        priceAfter: "1499",
+        priceBefore: "3599",
+        priceAfter: "1799",
         usefulFor: ["Capital Gain Income from Sale of Property, Mutual Funds, Shares, etc."],
         includes: ["Salary & House Property Plan"],
     },
