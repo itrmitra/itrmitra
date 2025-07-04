@@ -84,6 +84,6 @@ export const services = [
             "Interest Income",
             "No TDS deductions and refund",
         ],
-        extraInfo: ["Terms and Conditions Apply", "Offer valid until 30th June, 2023"],
+        extraInfo: ["Terms and Conditions Apply", "Offer valid until 31st May, 2025"],
     },
 ]
