@@ -106,10 +106,7 @@ export const services = [
     ],
     includes: [
       "Salary & House Property Plan",
-      "Business & Professional Plan",
       "Capital Gain Plan",
-      "Future & Options Plan",
-      "Crypto Currency Plan",
     ],
   },
 ];
