@@ -18,7 +18,7 @@ export default function AboutUs() {
                                 "text-justify md:text-justify"
                             )}
                         >
-                            Your Tax Solution Companion! With 8 years of experience in the taxation
+                            Your Tax Solution Companion! With 10+ years of experience in the taxation
                             realm, we're thrilled to launch our online portal, bringing our
                             expertise to your fingertips. Backed by a team of competent tax
                             professionals and Chartered Accountants, we're here to provide you with
