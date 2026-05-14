@@ -31,6 +31,7 @@ export default function Services() {
                     ))}
                     
                 </div>
+                 <div className="grid grid-cols-1 gap-6 text-left md:grid-cols-2 lg:grid-cols-3">
                 <div className="flex flex-col items-center justify-center gap-8 rounded-xl bg-green-500 p-8 text-center text-white shadow-lg">
                         <h1 className="mb-4 text-3xl font-bold tracking-tight lg:text-4xl">
                             For additional <br />
@@ -44,6 +45,7 @@ export default function Services() {
                             Connect With Our Team
                         </Link>
                     </div>
+                 </div>
             </div>
         </>
     )
