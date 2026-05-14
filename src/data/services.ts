@@ -39,9 +39,40 @@ export const services = [
       "Plan does not include Account Writing, Business Consultancy Services and Balance Sheet Attestation charges",
     ],
   },
-
+   {
+    name: "NRI Silver Plan",
+    priceBefore: "4999",
+    priceAfter: "2999",
+    usefulFor: [
+      "'Zero' Income of NRI Individual",
+      "NRI Having Only Interest and Dividend in India",
+    ],
+  },
   {
-    name: "High Networth Individual Plan",
+    name: "Future & Options Plan",
+    priceBefore: "4999",
+    priceAfter: "2999",
+    usefulFor: ["F&O Income/Loss (Non Audit)"],
+    includes: [
+      "Salary & House Property Plan",
+      "Business & Professional Plan",
+      "Capital Gain Plan",
+    ],
+  },
+{
+    name: "Crypto Currency Plan",
+    priceBefore: "6499",
+    priceAfter: "3999",
+    usefulFor: ["Income from Crypto"],
+    includes: [
+      "Salary & House Property Plan",
+      "Business & Professional Plan",
+      "Capital Gain Plan",
+      "Future & Options Plan",
+    ],
+  },
+  {
+    name: "High Networth Individual(HNI) Plan",
     priceBefore: "7499",
     priceAfter: "4999",
     usefulFor: ["Employee Having Salary More Than 1 Crore"],
@@ -64,34 +95,8 @@ export const services = [
       "Capital Gain Plan",
     ],
   },
-
-  {
-    name: "Future & Options Plan",
-    priceBefore: "4999",
-    priceAfter: "2999",
-    usefulFor: ["F&O Income/Loss (Non Audit)"],
-    includes: [
-      "Salary & House Property Plan",
-      "Business & Professional Plan",
-      "Capital Gain Plan",
-    ],
-  },
-
-  {
-    name: "Crypto Currency Plan",
-    priceBefore: "6499",
-    priceAfter: "3999",
-    usefulFor: ["Income from Crypto"],
-    includes: [
-      "Salary & House Property Plan",
-      "Business & Professional Plan",
-      "Capital Gain Plan",
-      "Future & Options Plan",
-    ],
-  },
-
-  {
-    name: "NRI / Resident Golden Plan",
+    {
+    name: "NRI Golden Plan",
     priceBefore: "9999",
     priceAfter: "7599",
     usefulFor: [
@@ -105,17 +110,6 @@ export const services = [
       "Capital Gain Plan",
       "Future & Options Plan",
       "Crypto Currency Plan",
-    ],
-  },
-
-  {
-    name: "NRI / Resident Silver Plan",
-    priceBefore: "4999",
-    priceAfter: "2999",
-    usefulFor: [
-      "NRI Having Only Interest and Dividend in India",
-      "Indian Income of NRI Individual",
-      "DTAA Tax Relief",
     ],
   },
 ];
