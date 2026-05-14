@@ -20,7 +20,7 @@ export default function Services() {
                             "mb-12 lg"
                         )}
                     >
-                        Our <b>team of experts</b> is dedicated to saving your time, money, and hassle. We provide an <b>end-to-end range of services</b> to ensure a complete solution for your requirements
+                        Our <b>team of experts</b> is dedicated to saving your time ⏳, money 💰, and hassle 🛡️. We provide an <b>end-to-end range of services</b> to ensure a complete solution for your requirements
                     </p>
                 </div>
 
