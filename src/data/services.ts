@@ -32,7 +32,24 @@ export const services = [
             "Plan does not include Account Writing, Business Consultancy Services and Balance Sheet Attestation charges",
         ],
     },
-
+     {
+        name: "High Network Individual Plan",
+        priceBefore: "7499",
+        priceAfter: "4999",
+        usefulFor: ["Employee Having Salary More Than 1 Crore"],
+        includes: ["Salary & House Property Plan", "Capital Gain Plan"],
+    },
+{
+        name: "RSU/ Foreign Assets",
+        priceBefore: "7599",
+        priceAfter: "4999",
+        usefulFor: ["Employees Having RSU outside India",
+                   "Employees Having Assets Outside India",
+                    ],
+        includes: ["Salary & House Property Plan",
+                  "Capital Gain Plan",
+                  ],
+    },
     {
         name: "Future & Options Plan",
         priceBefore: "4999",
@@ -57,9 +74,9 @@ export const services = [
         ],
     },
     {
-        name: "NRI/Resident Having Foreign Income",
-        priceBefore: "6999",
-        priceAfter: "4999",
+        name: "NRI/Resident Golden Plan",
+        priceBefore: "9999",
+        priceAfter: "7599",
         usefulFor: [
             "NRI income and Foreign Asset Reporting",
             "Indian Income of NRI individual",
@@ -73,17 +90,14 @@ export const services = [
             "Crypto Currency Plan",
         ],
     },
-    {
-        expired: true,
-        name: "Basic Plan",
-        priceBefore: "699",
-        priceAfter: "0",
+     {
+        name: "NRI/Resident Silver Plan",
+        priceBefore: "4999",
+        priceAfter: "2999",
         usefulFor: [
-            "Per Annum Salary less than 5 Lakh",
-            "Single House Property",
-            "Interest Income",
-            "No TDS deductions and refund",
-        ],
-        extraInfo: ["Terms and Conditions Apply", "Offer valid until 31st May, 2025"],
+            "NRI having only Interest and Dividend in India",
+            "Indian Income of NRI individual",
+            "DTAA Tax Relief",
+        ]       
     },
-]
+   ]
