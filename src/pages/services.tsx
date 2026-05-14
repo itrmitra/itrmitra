@@ -29,7 +29,9 @@ export default function Services() {
                     {services.map((item) => (
                         <ServiceCard {...item} key={item.name} />
                     ))}
-                    <div className="flex flex-col items-center justify-center gap-8 rounded-xl bg-green-500 p-8 text-center text-white shadow-lg">
+                    
+                </div>
+                <div className="flex flex-col items-center justify-center gap-8 rounded-xl bg-green-500 p-8 text-center text-white shadow-lg">
                         <h1 className="mb-4 text-3xl font-bold tracking-tight lg:text-4xl">
                             For additional <br />
                             discount and offers <br />
@@ -42,7 +44,6 @@ export default function Services() {
                             Connect With Our Team
                         </Link>
                     </div>
-                </div>
             </div>
         </>
     )
