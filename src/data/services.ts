@@ -72,7 +72,7 @@ export const services = [
     ],
   },
   {
-    name: "High Networth Individual(HNI) Plan",
+    name: "High Networth Individual (HNI) Plan",
     priceBefore: "7499",
     priceAfter: "4999",
     usefulFor: ["Employee Having Salary More Than 1 Crore"],
