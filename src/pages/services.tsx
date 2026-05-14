@@ -20,7 +20,7 @@ export default function Services() {
                             "mb-12 lg:w-1/2"
                         )}
                     >
-                        Our team of experts is here to help to save time, money and hassle. Our six
+                        Our team of experts is here to help to save time, money and hassle. Our nine
                         services offer a comprehensive solution for your needs.
                     </p>
                 </div>
@@ -34,10 +34,12 @@ export default function Services() {
                 <div className="mt-6 flex justify-center">
     <div className="flex w-full max-w-md flex-col items-center justify-center gap-8 rounded-xl bg-green-500 p-8 text-center text-white shadow-lg">
         <h1 className="mb-4 text-3xl font-bold tracking-tight lg:text-4xl">
-            For additional <br />
-            discount and offers <br />
-            contact our team
+             Got 10+ returns? <br />
+            You qualify for our Premium Volume Rate. <br />
+            Let’s talk..!
         </h1>
+
+         
 
         <Link
             href="/#form-filing-section"
