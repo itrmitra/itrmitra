@@ -1,7 +1,7 @@
 import { cn } from "../../lib/utils"
 import { buttonVariants } from "../ui/button"
 import { headingVariants } from "../ui/heading"
-import WhatsappButton from "../whatsapp_button"
+import { WhatsappNoticeButton } from "../whatsapp_button"
 
 export default function NoticeSection() {
     return (
@@ -22,7 +22,7 @@ export default function NoticeSection() {
                             Share Notice
                             <img src="/gmail.svg" className="h-6 w-6" alt="Gmail Logo" />
                         </a>
-                        <WhatsappButton />
+                        <WhatsappNoticeButton />
                     </div>
                 </div>
             </div>

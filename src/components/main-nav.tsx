@@ -2,27 +2,26 @@ import Link from "next/link"
 import { cn } from "../lib/utils"
 import { siteConfig } from "../data/siteconfig"
 
-interface MainNavProps {
-    currentHref: string
-}
+export function MainNav({ currentHref }: { currentHref: string }) {
+    const tabs = siteConfig.tabs.slice()
+    tabs.push({ title: "Useful Links", href: "/useful-links" })
 
-export function MainNav({ currentHref }: MainNavProps) {
     return (
-        <nav className="hidden items-center justify-evenly space-x-12 px-8 text-sm md:flex">
-            <>
-                {siteConfig.tabs.map((item) => (
-                    <Link
-                        key={item.href}
-                        href={item.href}
-                        className={cn(
-                            "font-medium decoration-1 underline-offset-4 hover:underline",
-                            currentHref == item.href && "font-bold text-brand"
-                        )}
-                    >
-                        {item.title}
-                    </Link>
-                ))}
-            </>
+        <nav className="hidden md:flex items-center gap-6">
+            {tabs.map((tab) => (
+                <Link
+                    key={tab.href}
+                    href={tab.href}
+                    className={cn(
+                        "text-sm font-medium transition-colors hover:text-brand",
+                        currentHref === tab.href
+                            ? "text-brand font-semibold"
+                            : "text-gray-600"
+                    )}
+                >
+                    {tab.title}
+                </Link>
+            ))}
         </nav>
     )
 }
