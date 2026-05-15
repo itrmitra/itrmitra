@@ -1,4 +1,4 @@
-import { CheckCircle2, IndianRupee, MessageCircle } from "lucide-react"
+import { CheckCircle2, IndianRupee, MessageCircle, Mail } from "lucide-react"
 import { services } from "../data/services"
 import { cn } from "../lib/utils"
 import Link from "next/link"
@@ -187,7 +187,7 @@ function ServiceCard({
                     transform: isHovered ? "translateY(0)" : "translateY(8px)",
                     pointerEvents: isHovered ? "auto" : "none",
                 }}
-                className="mt-6"
+                className="mt-6 flex flex-col gap-3"
             >
                 <a
                     href={whatsappUrl}
@@ -200,9 +200,20 @@ function ServiceCard({
                     )}
                 >
                     <MessageCircle size={18} />
-                    Send Enquiry
+                    WhatsApp Enquiry
                     <img src="/whatsapp.svg" className="h-5 w-5" alt="WhatsApp" />
                 </a>
+                <Link
+                    href={{ pathname: "/", query: { plan: name }, hash: "form-filing-section" }}
+                    className={cn(
+                        "flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold text-brand",
+                        "border-2 border-brand bg-white hover:bg-brand hover:text-white active:scale-95",
+                        "transition-colors duration-200"
+                    )}
+                >
+                    <Mail size={18} />
+                    Email Enquiry
+                </Link>
             </div>
         </div>
     )

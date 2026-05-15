@@ -6,7 +6,7 @@ import { buttonVariants } from "./ui/button"
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 
 import { Mail, Menu } from "lucide-react"
-import WhatsappButton from "./whatsapp_button"
+import { WhatsappButton } from "./whatsapp_button"
 import { siteConfig } from "../data/siteconfig"
 import { Logo } from "./logo"
 import { cn } from "../lib/utils"

@@ -1,6 +1,6 @@
 import { cn } from "../../lib/utils"
 import { headingVariants } from "../ui/heading"
-import WhatsappButton from "../whatsapp_button"
+import { WhatsappButton } from "../whatsapp_button"
 
 export default function LandingSection() {
     return (

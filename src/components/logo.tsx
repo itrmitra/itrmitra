@@ -1,10 +1,17 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Logo() {
     return (
-        <Link href="/" className="flex flex-col items-center justify-center">
-            <h1 className="text-3xl font-extrabold tracking-tighter">ITR Mitra</h1>
-            <p className="text-xs italic">Your ITR, Our Expertise</p>
+        <Link href="/" className="flex items-center justify-center">
+            <Image
+                src="/aboutus/itrmitra_logo.png"
+                alt="ITR Mitra Logo"
+                width={132}
+                height={56}
+                className="object-contain"
+                priority
+            />
         </Link>
     )
 }

@@ -5,7 +5,9 @@ import { cn } from "../../lib/utils"
 import { inputVariants } from "../ui/input"
 import { Info } from "lucide-react"
 import { headingVariants } from "../ui/heading"
-
+import { useRouter } from "next/router"
+import { useEffect } from "react"
+import { services } from "../../data/services"
 const sourceOfIncomeOptions = [
     "Salary/ Pension",
     "Rent Income / Home loan interest",
@@ -24,6 +26,7 @@ interface FormDataType {
     query: string
     type?: "FILE ITR" | "CONSULTANCY"
     sourceOfIncome: { [key: string]: boolean }
+    plan?: string
 }
 
 export default function FormFilingSection() {
@@ -34,7 +37,15 @@ export default function FormFilingSection() {
         query: "",
         type: undefined,
         sourceOfIncome: {},
+        plan: "",
     })
+    const router = useRouter()
+
+    useEffect(() => {
+        if (router.query.plan && typeof router.query.plan === "string") {
+            setFormState((prev) => ({ ...prev, plan: router.query.plan as string }))
+        }
+    }, [router.query.plan])
     const [error, setError] = useState("")
     const [sourceOfIncomeError, setSourceOfIncomeError] = useState("")
 
@@ -90,6 +101,7 @@ export default function FormFilingSection() {
                 query: "",
                 type: undefined,
                 sourceOfIncome: {},
+                plan: "",
             })
         }
         setLoading(false)
@@ -172,6 +184,25 @@ export default function FormFilingSection() {
                             minLength={10}
                             maxLength={10}
                         />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="plan" className="font-semibold">
+                            Interested Plan
+                        </label>
+                        <select
+                            id="plan"
+                            name="plan"
+                            value={formState.plan}
+                            onChange={onChange as any} // React typings mismatch between input and select onChange
+                            className={cn(inputVariants(), "bg-white")}
+                        >
+                            <option value="">Select a Plan (Optional)</option>
+                            {services.map((s) => (
+                                <option key={s.name} value={s.name}>
+                                    {s.name}
+                                </option>
+                            ))}
+                        </select>
                     </div>
                     <div className="flex flex-col gap-2">
                         <label htmlFor="query" className="font-semibold">
