@@ -1,4 +1,4 @@
-import { CheckCircle2, IndianRupee } from "lucide-react"
+import { CheckCircle2, IndianRupee, MessageCircle } from "lucide-react"
 import { services } from "../data/services"
 import { cn } from "../lib/utils"
 import Link from "next/link"
@@ -6,8 +6,11 @@ import { buttonVariants } from "../components/ui/button"
 import { headingVariants } from "../components/ui/heading"
 import CustomHead from "../components/custom-head"
 import { siteConfig } from "../data/siteconfig"
+import { useState } from "react"
 
 export default function Services() {
+    const [hoveredCard, setHoveredCard] = useState<string | null>(null)
+
     return (
         <>
             <CustomHead {...siteConfig.pageInfo.services} />
@@ -26,29 +29,34 @@ export default function Services() {
 
                 <div className="grid grid-cols-1 gap-6 text-left md:grid-cols-2 lg:grid-cols-3">
                     {services.map((item) => (
-                        <ServiceCard {...item} key={item.name} />
+                        <ServiceCard
+                            {...item}
+                            key={item.name}
+                            isHovered={hoveredCard === item.name}
+                            isBlurred={hoveredCard !== null && hoveredCard !== item.name}
+                            onMouseEnter={() => setHoveredCard(item.name)}
+                            onMouseLeave={() => setHoveredCard(null)}
+                        />
                     ))}
-                    
                 </div>
+
                 <div className="mt-6 flex justify-center">
-    <div className="flex w-full max-w-md flex-col items-center justify-center gap-8 rounded-xl bg-green-500 p-8 text-center text-white shadow-lg">
-        <h1 className="mb-4 text-3xl font-bold tracking-tight lg:text-4xl">
-             Have 10+ ITRs..? <br />
-            You're qualifing for our bulk discount.. <br />
-            <br/>
-            Let’s talk..!
-        </h1>
+                    <div className="flex w-full max-w-md flex-col items-center justify-center gap-8 rounded-xl bg-green-500 p-8 text-center text-white shadow-lg">
+                        <h1 className="mb-4 text-3xl font-bold tracking-tight lg:text-4xl">
+                             Have 10+ ITRs..? <br />
+                            You're qualifing for our bulk discount.. <br />
+                            <br/>
+                            Let's talk..!
+                        </h1>
 
-         
-
-        <Link
-            href="/#form-filing-section"
-            className={cn(buttonVariants(), "bg-white text-dark-gray")}
-        >
-            Connect With Our Team
-        </Link>
-    </div>
-</div>
+                        <Link
+                            href="/#form-filing-section"
+                            className={cn(buttonVariants(), "bg-white text-dark-gray")}
+                        >
+                            Connect With Our Team
+                        </Link>
+                    </div>
+                </div>
             </div>
         </>
     )
@@ -63,6 +71,10 @@ function ServiceCard({
     extraInfo,
     highlight,
     expired,
+    isHovered,
+    isBlurred,
+    onMouseEnter,
+    onMouseLeave,
 }: {
     expired?: boolean
     highlight?: boolean
@@ -72,10 +84,35 @@ function ServiceCard({
     usefulFor: string[]
     includes?: string[]
     extraInfo?: string[]
+    isHovered: boolean
+    isBlurred: boolean
+    onMouseEnter: () => void
+    onMouseLeave: () => void
 }) {
+    const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
+    const whatsappMessage = encodeURIComponent(
+        `Hi, I'm interested in the *${name}* plan. Please share more details.`
+    )
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+
     return (
         <div
-            className={cn("rounded-xl bg-white p-8 shadow-lg", highlight && "bg-brand text-white")}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            style={{
+                transition: "filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease",
+                filter: isBlurred ? "blur(3px) brightness(0.75)" : "none",
+                transform: isHovered ? "translateY(-6px) scale(1.02)" : "none",
+                boxShadow: isHovered
+                    ? "0 20px 40px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.6)"
+                    : undefined,
+                zIndex: isHovered ? 10 : 1,
+                position: "relative",
+            }}
+            className={cn(
+                "rounded-xl bg-white p-8 shadow-lg",
+                highlight && "bg-brand text-white"
+            )}
         >
             {expired && (
                 <div className="mb-4 rounded-md bg-red-500/20 p-2 text-center font-bold text-red-500">
@@ -141,6 +178,32 @@ function ServiceCard({
                     ))}
                 </ul>
             )}
+
+            {/* Send Enquiry Button — appears on hover */}
+            <div
+                style={{
+                    transition: "opacity 0.3s ease, transform 0.3s ease",
+                    opacity: isHovered ? 1 : 0,
+                    transform: isHovered ? "translateY(0)" : "translateY(8px)",
+                    pointerEvents: isHovered ? "auto" : "none",
+                }}
+                className="mt-6"
+            >
+                <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                        "flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold text-white",
+                        "bg-green-500 hover:bg-green-600 active:scale-95",
+                        "transition-colors duration-200"
+                    )}
+                >
+                    <MessageCircle size={18} />
+                    Send Enquiry
+                    <img src="/whatsapp.svg" className="h-5 w-5" alt="WhatsApp" />
+                </a>
+            </div>
         </div>
     )
 }
