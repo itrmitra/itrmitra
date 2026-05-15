@@ -20,7 +20,7 @@ export default function OfferSection() {
                 </h1>
                 <h1 className="mb-8 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
                     <span className="text-brand">50% DISCOUNT</span> <br />
-                    <span>ON SALARY AND HP PLAN</span>
+                    <span>On Salary Plan</span>
                 </h1>
                 <ServiceCard {...services[0]} />
             </div>
