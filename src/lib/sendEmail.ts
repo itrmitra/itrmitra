@@ -5,6 +5,7 @@ interface FormState {
     query: string
     type?: "FILE ITR" | "CONSULTANCY"
     sourceOfIncome: { [key: string]: boolean }
+    plan?: string
 }
 
 export const sendEmail = async (state: FormState) => {
@@ -25,6 +26,7 @@ export const sendEmail = async (state: FormState) => {
         <body>
         <b>Name: </b>${state.name}<br>
         <b>Phone Number: </b>${state.phone}<br>
+        ${state.plan ? `<b>Interested Plan: </b>${state.plan}<br>` : ''}
         <b>Source Of Income: </b><br>
         ${Object.keys(state.sourceOfIncome).join("<br>")}
         <br>
