@@ -42,11 +42,25 @@ export default function FormFilingSection() {
     })
     const router = useRouter()
 
+    const STORAGE_KEY = "itrmitra_form_v1"
+
     useEffect(() => {
         if (router.query.plan && typeof router.query.plan === "string") {
             setFormState((prev) => ({ ...prev, plan: router.query.plan as string }))
         }
     }, [router.query.plan])
+
+    useEffect(() => {
+        if (typeof window === "undefined") return
+        const saved = localStorage.getItem(STORAGE_KEY)
+        if (!saved) return
+        try {
+            const parsed = JSON.parse(saved)
+            setFormState((prev) => ({ ...prev, ...parsed }))
+        } catch (e) {
+            // ignore
+        }
+    }, [])
     const [error, setError] = useState("")
     const [sourceOfIncomeError, setSourceOfIncomeError] = useState("")
 
@@ -104,15 +118,30 @@ export default function FormFilingSection() {
                 sourceOfIncome: {},
                 plan: "",
             })
+            if (typeof window !== "undefined") localStorage.removeItem(STORAGE_KEY)
         }
         setLoading(false)
     }
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormState((prev) => ({
-            ...prev,
-            [event.target.name]: event.target.value,
-        }))
+        const name = event.target.name
+        const value = event.target.value
+        setFormState((prev) => {
+            const next = { ...prev, [name]: value } as FormDataType
+            if (typeof window !== "undefined" && (name === "name" || name === "email" || name === "phone")) {
+                try {
+                    const toSave = {
+                        name: next.name,
+                        email: next.email,
+                        phone: next.phone,
+                    }
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave))
+                } catch (e) {
+                    // ignore storage errors
+                }
+            }
+            return next
+        })
     }
 
     const onSourceOfIncomeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -265,7 +294,7 @@ export default function FormFilingSection() {
 
                             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                                 {sourceOfIncomeOptions.map((item) => (
-                                    <div className="flex items-start gap-2">
+                                    <div className="flex items-start gap-2" key={item}>
                                         <input
                                             id={item}
                                             type="checkbox"
