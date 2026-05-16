@@ -24,8 +24,8 @@ export const services = [
 
   {
     name: "Business & Professional Plan",
-    priceBefore: "4499",
-    priceAfter: "2999",
+    priceBefore: "4999",
+    priceAfter: "3499",
     usefulFor: [
       "Business & Professional Income (Non Audit)",
       "Speculative Income / Intraday Trading of Shares",
@@ -98,7 +98,7 @@ export const services = [
     {
     name: "NRI Golden Plan",
     priceBefore: "9999",
-    priceAfter: "7599",
+    priceAfter: "7499",
     usefulFor: [
       "NRI Income and Foreign Asset Reporting",
       "Indian Income of NRI Individual",

@@ -10,6 +10,9 @@ import { useState } from "react"
 
 export default function Services() {
     const [hoveredCard, setHoveredCard] = useState<string | null>(null)
+    const sortedServices = [...services].sort((a, b) =>
+        Number(a.priceAfter) - Number(b.priceAfter)
+    )
 
     return (
         <>
@@ -28,7 +31,7 @@ export default function Services() {
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 text-left md:grid-cols-2 lg:grid-cols-3">
-                    {services.map((item) => (
+                    {sortedServices.map((item) => (
                         <ServiceCard
                             {...item}
                             key={item.name}

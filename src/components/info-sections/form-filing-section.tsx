@@ -8,6 +8,7 @@ import { headingVariants } from "../ui/heading"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 import { services } from "../../data/services"
+
 const sourceOfIncomeOptions = [
     "Salary/ Pension",
     "Rent Income / Home loan interest",
@@ -35,7 +36,7 @@ export default function FormFilingSection() {
         email: "",
         phone: "",
         query: "",
-        type: undefined,
+        type: "FILE ITR",
         sourceOfIncome: {},
         plan: "",
     })
@@ -83,8 +84,8 @@ export default function FormFilingSection() {
             return
         }
 
-        if (Object.keys(formState.sourceOfIncome).length <= 0) {
-            setSourceOfIncomeError("Atleast one source of income must be selected")
+        if (formState.type === "FILE ITR" && formState.plan?.trim().length === 0 && Object.keys(formState.sourceOfIncome).length === 0) {
+            setError("Please select an interested plan or source of income")
             return
         }
 
@@ -99,7 +100,7 @@ export default function FormFilingSection() {
                 email: "",
                 phone: "",
                 query: "",
-                type: undefined,
+                type: "FILE ITR",
                 sourceOfIncome: {},
                 plan: "",
             })
@@ -186,9 +187,12 @@ export default function FormFilingSection() {
                         />
                     </div>
                     <div className="flex flex-col gap-2">
-                        <label htmlFor="plan" className="font-semibold">
-                            Interested Plan
-                        </label>
+                        <div className="flex items-center justify-between font-semibold">
+                            <label htmlFor="plan">Interested Plan</label>
+                            <a href="/services" className="text-blue-500 font-bold hover:underline">
+                                See all plans
+                            </a>
+                        </div>
                         <select
                             id="plan"
                             name="plan"
@@ -196,7 +200,7 @@ export default function FormFilingSection() {
                             onChange={onChange as any} // React typings mismatch between input and select onChange
                             className={cn(inputVariants(), "bg-white")}
                         >
-                            <option value="">Select a Plan (Optional)</option>
+                            <option value="">Select a Plan</option>
                             {services.map((s) => (
                                 <option key={s.name} value={s.name}>
                                     {s.name}
@@ -226,7 +230,6 @@ export default function FormFilingSection() {
                     <div className="mb-2 flex gap-4 font-bold">
                         <div className="flex gap-2">
                             <input
-                                required
                                 id="fileitr"
                                 type="radio"
                                 name="type"
@@ -240,7 +243,6 @@ export default function FormFilingSection() {
                         </div>
                         <div className="flex gap-2">
                             <input
-                                required
                                 id="consultancy"
                                 type="radio"
                                 name="type"
@@ -258,8 +260,7 @@ export default function FormFilingSection() {
                     {formState.type === "FILE ITR" && (
                         <div>
                             <h1 className="mb-2 font-semibold">
-                                Source Of Income{" "}
-                                <span className="text-sm font-normal">(Required)</span>
+                                Source Of Income{" "}                            
                             </h1>
 
                             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
